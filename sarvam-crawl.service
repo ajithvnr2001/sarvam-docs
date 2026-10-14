@@ -1,0 +1,18 @@
+[Unit]
+Description=Sarvam docs end-to-end crawler (resume-safe)
+Wants=network-online.target
+After=network-online.target
+RequiresMountsFor=/data
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/data/opencode/sarvam
+ExecStart=/usr/bin/python3 /data/opencode/sarvam/crawl_sarvam.py --max-pages 8000 --concurrency 15
+Restart=always
+RestartSec=60
+StandardOutput=append:/data/opencode/sarvam/crawl.log
+StandardError=append:/data/opencode/sarvam/crawl.log
+
+[Install]
+WantedBy=multi-user.target

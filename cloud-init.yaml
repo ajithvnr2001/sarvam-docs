@@ -1,0 +1,5 @@
+#cloud-config
+# ONE-TIME: attach as cloud-init custom-data on the spot-VM template.
+# Every new VM then reinstalls + starts the crawler from /data on first boot.
+runcmd:
+  - [bash, /data/opencode/sarvam/boot.sh]
