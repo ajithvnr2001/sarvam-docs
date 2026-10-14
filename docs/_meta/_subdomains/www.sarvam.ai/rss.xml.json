@@ -1,0 +1,10 @@
+{
+  "url": "https://www.sarvam.ai/rss.xml",
+  "file": "_subdomains/www.sarvam.ai/rss.xml.md",
+  "title": "Sarvam AI Blog",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-14T08:16:14.259419+00:00",
+  "html_len": 14703,
+  "md_len": 6291,
+  "depth": 2
+}

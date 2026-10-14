@@ -1,0 +1,10 @@
+{
+  "url": "https://status.sarvam.ai/incidents/01KZTQRVD2H6VG5G6KT560ZVYB/",
+  "file": "_subdomains/status.sarvam.ai/incidents/01KZTQRVD2H6VG5G6KT560ZVYB.md",
+  "title": "Vobiz numbers starting with 79 and 80 are observing carrier side issues which is causing drop in connectivity from 12 Aug, 14:25. We expect a resolution from them by 4:30PM - Sarvam API Status Page Status",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-14T08:16:34.824064+00:00",
+  "html_len": 123406,
+  "md_len": 1726,
+  "depth": 3
+}

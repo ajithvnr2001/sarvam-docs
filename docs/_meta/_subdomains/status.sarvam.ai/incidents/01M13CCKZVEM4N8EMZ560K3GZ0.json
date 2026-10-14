@@ -1,0 +1,10 @@
+{
+  "url": "https://status.sarvam.ai/incidents/01M13CCKZVEM4N8EMZ560K3GZ0/",
+  "file": "_subdomains/status.sarvam.ai/incidents/01M13CCKZVEM4N8EMZ560K3GZ0.md",
+  "title": "Potential Impact to 7965-Series Numbers (Vobiz) - Sarvam API Status Page Status",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-14T08:16:34.261660+00:00",
+  "html_len": 125462,
+  "md_len": 1794,
+  "depth": 3
+}

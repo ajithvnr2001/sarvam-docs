@@ -1,0 +1,10 @@
+{
+  "url": "https://status.sarvam.ai/incidents/01M31Q1PD03PHSZN2QC40TSJV3/",
+  "file": "_subdomains/status.sarvam.ai/incidents/01M31Q1PD03PHSZN2QC40TSJV3.md",
+  "title": "Intermittent KYC Verification Issues - Sarvam API Status Page Status",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-14T08:16:34.167262+00:00",
+  "html_len": 123017,
+  "md_len": 1535,
+  "depth": 3
+}

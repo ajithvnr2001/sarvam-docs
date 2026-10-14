@@ -1,0 +1,10 @@
+{
+  "url": "https://status.sarvam.ai/incidents/01KYCXPJ8WFBCJT2G434KVRXEZ/",
+  "file": "_subdomains/status.sarvam.ai/incidents/01KYCXPJ8WFBCJT2G434KVRXEZ.md",
+  "title": "Degraded API Performance - Sarvam API Status Page Status",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-14T08:16:35.251264+00:00",
+  "html_len": 131094,
+  "md_len": 1817,
+  "depth": 3
+}

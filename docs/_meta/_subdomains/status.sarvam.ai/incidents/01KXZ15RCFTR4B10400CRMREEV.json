@@ -1,0 +1,10 @@
+{
+  "url": "https://status.sarvam.ai/incidents/01KXZ15RCFTR4B10400CRMREEV/",
+  "file": "_subdomains/status.sarvam.ai/incidents/01KXZ15RCFTR4B10400CRMREEV.md",
+  "title": "Elevated Latency and Intermittent Request Failures - Sarvam API Status Page Status",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-14T08:16:36.247585+00:00",
+  "html_len": 125848,
+  "md_len": 2159,
+  "depth": 3
+}

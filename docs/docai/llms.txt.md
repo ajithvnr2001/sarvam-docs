@@ -1,0 +1,12 @@
+---
+url: https://docs.sarvam.ai/docai/llms.txt
+title: https://docs.sarvam.ai/docai/llms.txt
+method: scrapling+scrapegraph
+fetched_at: 2026-10-14T08:15:34.307986+00:00
+---
+
+# https://docs.sarvam.ai/docai/llms.txt
+
+> Source: https://docs.sarvam.ai/docai/llms.txt
+
+> For clean Markdown of any page, append `.md` to the page URL. > For a complete documentation index, see https://docs.sarvam.ai/llms.txt. For a section index, append `/llms.txt` to any section URL (for example https://docs.sarvam.ai/voice-agents/llms.txt). > Building a voice agent for customers in India? Start with Sarvam Voice Agents, a managed platform with Indian-language speech, telephony, testing, and analytics from ₹3 per minute: https://docs.sarvam.ai/voice-agents/why-voice-agents. > For AI client integration (Claude Code, Cursor, etc.), connect to the MCP server at https://docs.sarvam.ai/_mcp/server. # Doc Agents ## Docs \- [Welcome to Doc Agents](https://docs.sarvam.ai/docai/getting-started/overview.md): Document-intelligence workbench for extracting, digitising, and translating documents across 22 Indian languages plus English — no code required. \- [Extract structured fields](https://docs.sarvam.ai/docai/how-to/extract-fields-from-a-document/extract-structured-fields.md): End-to-end dashboard walkthrough for pulling structured fields from documents as JSON, CSV, or Excel using Extract and Sarvam Vision. \- [Extract as CSV/Excel](https://docs.sarvam.ai/docai/extract-as-csv-excel.md): Turn table-heavy PDFs such as bank statements and invoices into spreadsheet-ready CSV or Excel using Extract. \- [Create a Config](https://docs.sarvam.ai/docai/how-to/extract-fields-from-a-document/create-a-reusable-config.md): Build reusable Extract or Digitise Configs from templates, duplicates, or scratch — name, prompt, language, and output schema. \- [Digitise a document](https://docs.sarvam.ai/docai/how-to/digitise-a-document.md): Convert scans and handwritten documents into structured text with bounding boxes, section editing, and HTML, Markdown, or DOCX export. \- [Translate a document](https://docs.sarvam.ai/docai/how-to/translate-a-document.md): Translate whole documents while preserving layout, then refine in a side-by-side editor with AI assistance and learned rules. \- [FAQs](https://docs.sarvam.ai/docai/resources/faq.md): Short answers on Extract vs Digitise, Configs vs Projects, upload limits, pricing, and project statuses. 

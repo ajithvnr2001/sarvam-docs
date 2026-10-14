@@ -1,0 +1,10 @@
+{
+  "url": "https://status.sarvam.ai/history/",
+  "file": "_subdomains/status.sarvam.ai/history.md",
+  "title": "Sarvam API Status Page Status",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-14T08:16:01.069878+00:00",
+  "html_len": 197655,
+  "md_len": 6413,
+  "depth": 2
+}

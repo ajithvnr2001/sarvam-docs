@@ -1,0 +1,10 @@
+{
+  "url": "https://status.sarvam.ai/incidents/01KZEB69R8MAC244K3G3NXBG9P/",
+  "file": "_subdomains/status.sarvam.ai/incidents/01KZEB69R8MAC244K3G3NXBG9P.md",
+  "title": "Intermittent model failures affecting calls  - Sarvam API Status Page Status",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-14T08:16:35.161883+00:00",
+  "html_len": 130277,
+  "md_len": 1955,
+  "depth": 3
+}

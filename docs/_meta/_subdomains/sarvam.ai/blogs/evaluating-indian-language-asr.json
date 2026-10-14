@@ -1,0 +1,10 @@
+{
+  "url": "https://sarvam.ai/blogs/evaluating-indian-language-asr/",
+  "file": "_subdomains/sarvam.ai/blogs/evaluating-indian-language-asr.md",
+  "title": "Indic ASR evaluation: beyond WER to LLM & semantic metrics | Sarvam AI",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-14T08:17:20.918984+00:00",
+  "html_len": 476756,
+  "md_len": 36627,
+  "depth": 3
+}

@@ -1,0 +1,10 @@
+{
+  "url": "https://status.sarvam.ai/incidents/01KY7S28F1T592R2XQRD6MXE2B/",
+  "file": "_subdomains/status.sarvam.ai/incidents/01KY7S28F1T592R2XQRD6MXE2B.md",
+  "title": "Elevated Latency and Intermittent Request Failures - Sarvam API Status Page Status",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-14T08:16:35.505606+00:00",
+  "html_len": 125634,
+  "md_len": 2168,
+  "depth": 3
+}

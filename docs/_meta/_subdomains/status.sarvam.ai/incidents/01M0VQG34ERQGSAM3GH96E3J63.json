@@ -1,0 +1,10 @@
+{
+  "url": "https://status.sarvam.ai/incidents/01M0VQG34ERQGSAM3GH96E3J63/",
+  "file": "_subdomains/status.sarvam.ai/incidents/01M0VQG34ERQGSAM3GH96E3J63.md",
+  "title": "Outbound calling failures on 8071584-series numbers (Vobiz) - Sarvam API Status Page Status",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-14T08:16:34.312535+00:00",
+  "html_len": 126417,
+  "md_len": 2150,
+  "depth": 3
+}

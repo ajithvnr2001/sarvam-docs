@@ -1,0 +1,10 @@
+{
+  "url": "https://status.sarvam.ai/incidents/01M0FDHP7XQWZ7DMZAY0Q3NVE7/",
+  "file": "_subdomains/status.sarvam.ai/incidents/01M0FDHP7XQWZ7DMZAY0Q3NVE7.md",
+  "title": "Chat Completions API outage - Sarvam API Status Page Status",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-14T08:16:34.728244+00:00",
+  "html_len": 122123,
+  "md_len": 1454,
+  "depth": 3
+}

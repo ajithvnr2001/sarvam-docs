@@ -1,0 +1,10 @@
+{
+  "url": "https://www.sarvam.ai/contact-us/",
+  "file": "_subdomains/www.sarvam.ai/contact-us.md",
+  "title": "Get in Touch | Sarvam AI",
+  "method": "crawl4ai+scrapegraph (scrapling: scrapling thin content (792 chars), fallback to crawl4ai)",
+  "fetched_at": "2026-10-14T08:16:34.568658+00:00",
+  "html_len": 53819,
+  "md_len": 822,
+  "depth": 1
+}

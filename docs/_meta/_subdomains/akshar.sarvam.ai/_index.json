@@ -1,0 +1,10 @@
+{
+  "url": "https://akshar.sarvam.ai/",
+  "file": "_subdomains/akshar.sarvam.ai/_index.md",
+  "title": "Akshar by Sarvam",
+  "method": "crawl4ai+scrapegraph (scrapling: scrapling thin content (59 chars), fallback to crawl4ai)",
+  "fetched_at": "2026-10-14T08:18:00.708045+00:00",
+  "html_len": 70441,
+  "md_len": 353,
+  "depth": 3
+}

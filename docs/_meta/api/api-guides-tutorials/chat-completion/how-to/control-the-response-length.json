@@ -1,0 +1,10 @@
+{
+  "url": "https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/how-to/control-the-response-length/",
+  "file": "api/api-guides-tutorials/chat-completion/how-to/control-the-response-length.md",
+  "title": "How to control the response length with max_tokens | Sarvam API Docs",
+  "method": "scrapling+scrapegraph",
+  "fetched_at": "2026-10-14T08:14:12.083485+00:00",
+  "html_len": 174160,
+  "md_len": 22424,
+  "depth": 0
+}
