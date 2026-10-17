@@ -211,11 +211,15 @@ Turn a script into a multi-speaker podcast episode with distinct Bulbul voices.
 
 [Full changelog →](/changelog)
 
+[October 2026 Bulbul V3 End of Life for Voice Agents](/voice-agents/build/voice-language)
+
+Bulbul V3 reaches end of life on Voice Agents on November 10, 2026. Switch your agents to Bulbul V4 before then.
+
+Read the changelog →
+
 [October 2026 Updated Pricing for Language Models](/api/getting-started/pricing)
 
 New per-token prices for Sarvam 105B, Gemma 4, GLM-5.3, and DeepSeek V4.1 Flash, including lower input and output prices for Sarvam 105B and Gemma 4.
-
-Read the changelog →
 
 [October 2026 Instant Voice Cloning in the sarvamai SDKs](/api/api-guides-tutorials/voice-cloning/overview)
 
@@ -223,11 +227,7 @@ Python and TypeScript SDKs expose Instant Voice Cloning (beta) with the same con
 
 [October 2026 Session Affinity for Chat Completion V2](/api/api-guides-tutorials/chat-completion/overview#session-affinity-for-multi-turn-conversations)
 
-Send an optional `x-session-affinity` header so multi-turn conversations reuse cached prompt context for lower latency.
-
-[October 2026 Bulbul V4 for Voice Agents](/voice-agents/build/voice-language)
-
-Bulbul V4 is now available for Voice Agents alongside Bulbul V3, with a filterable voice catalog to browse and preview voices.
+Send an optional `x-session-affinity` header so multi-turn `gemma4` conversations reuse cached prompt context for lower latency.
 
 ## Resources
 
@@ -306,8 +306,8 @@ Community
   - [Meta Prompt Guide](https://docs.sarvam.ai/api-reference/metaprompt.md)
   - [Introduction](https://docs.sarvam.ai/api-reference/conversations.md)
 - [Changelog](https://docs.sarvam.ai/changelog/llms.txt): Track API and product updates
+  - [October 16, 2026](https://docs.sarvam.ai/changelog/2026/10/16.md)
   - [October 14, 2026](https://docs.sarvam.ai/changelog/2026/10/14.md)
   - [October 12, 2026](https://docs.sarvam.ai/changelog/2026/10/12.md)
   - [October 10, 2026](https://docs.sarvam.ai/changelog/2026/10/10.md)
   - [October 6, 2026](https://docs.sarvam.ai/changelog/2026/10/6.md)
-  - [October 4, 2026](https://docs.sarvam.ai/changelog/2026/10/4.md)
