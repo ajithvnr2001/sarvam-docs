@@ -9,8 +9,10 @@ Type=simple
 User=root
 WorkingDirectory=/data/opencode/sarvam
 ExecStart=/usr/bin/python3 /data/opencode/sarvam/crawl_sarvam.py --max-pages 8000 --concurrency 15
-Restart=always
+Restart=on-failure
 RestartSec=60
+StartLimitIntervalSec=1800
+StartLimitBurst=5
 StandardOutput=append:/data/opencode/sarvam/crawl.log
 StandardError=append:/data/opencode/sarvam/crawl.log
 
