@@ -1,0 +1,15 @@
+[Unit]
+Description=Sarvam docs incremental update (new + lastmod-stale pages only)
+Wants=network-online.target
+After=network-online.target
+RequiresMountsFor=/data
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/data/opencode/sarvam
+ExecStart=/usr/bin/python3 /data/opencode/sarvam/update_incremental.py --concurrency 10
+TimeoutStartSec=7200
+
+[Install]
+WantedBy=multi-user.target
