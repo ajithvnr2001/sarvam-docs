@@ -29,7 +29,7 @@ async def live_sitemaps():
         r = await c.get("https://docs.sarvam.ai/sitemap.xml", timeout=30); r.raise_for_status()
         locs = re.findall(r"<loc>([^<]+)</loc>", r.text)
         out["docs"] = sorted({C.normalize_url(u) for u in locs if C.normalize_url(u)})
-        for u, d in re.findall(r"<loc>([^<]+)</loc><lastmod>([^<]+)</lastmod>", r.text):
+        for u, d in re.findall(r"<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>", r.text):
             n = C.normalize_url(u)
             if n and (n not in lastmod or d > lastmod[n]): lastmod[n] = d
     return out, lastmod
