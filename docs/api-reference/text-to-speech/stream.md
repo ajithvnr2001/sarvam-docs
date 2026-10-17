@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/text-to-speech/stream/
 title: WebSocket | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:07.135808+00:00
+fetched_at: 2026-10-17T14:23:22.945730+00:00
 ---
 
 # WebSocket | Sarvam API Docs

@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/
 title: AI for all from India | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:13:42.778888+00:00
+fetched_at: 2026-10-17T14:23:19.790627+00:00
 ---
 
 # AI for all from India | Sarvam API Docs
@@ -81,9 +81,9 @@ End-to-end projects you can run today, with the full source in each guide.
 
 [Full changelog →](https://docs.sarvam.ai/changelog)
 
-[October 2026Updated Pricing for Language ModelsNew per-token prices for Sarvam 105B, Gemma 4, GLM-5.3, and DeepSeek V4.1 Flash, including lower input and output prices for Sarvam 105B and Gemma 4.Read the changelog →](https://docs.sarvam.ai/api/getting-started/pricing)
+[October 2026Bulbul V3 End of Life for Voice AgentsBulbul V3 reaches end of life on Voice Agents on November 10, 2026. Switch your agents to Bulbul V4 before then.Read the changelog →](https://docs.sarvam.ai/voice-agents/build/voice-language)
 
-[October 2026Instant Voice Cloning in the sarvamai SDKsPython and TypeScript SDKs expose Instant Voice Cloning (beta) with the same convert / convertStream / WebSocket shape as Bulbul TTS.](https://docs.sarvam.ai/api/api-guides-tutorials/voice-cloning/overview)[October 2026Session Affinity for Chat Completion V2Send an optional `x-session-affinity` header so multi-turn conversations reuse cached prompt context for lower latency.](https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/overview#session-affinity-for-multi-turn-conversations)[October 2026Bulbul V4 for Voice AgentsBulbul V4 is now available for Voice Agents alongside Bulbul V3, with a filterable voice catalog to browse and preview voices.](https://docs.sarvam.ai/voice-agents/build/voice-language)
+[October 2026Updated Pricing for Language ModelsNew per-token prices for Sarvam 105B, Gemma 4, GLM-5.3, and DeepSeek V4.1 Flash, including lower input and output prices for Sarvam 105B and Gemma 4.](https://docs.sarvam.ai/api/getting-started/pricing)[October 2026Instant Voice Cloning in the sarvamai SDKsPython and TypeScript SDKs expose Instant Voice Cloning (beta) with the same convert / convertStream / WebSocket shape as Bulbul TTS.](https://docs.sarvam.ai/api/api-guides-tutorials/voice-cloning/overview)[October 2026Session Affinity for Chat Completion V2Send an optional `x-session-affinity` header so multi-turn `gemma4` conversations reuse cached prompt context for lower latency.](https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/overview#session-affinity-for-multi-turn-conversations)
 
 ## Resources
 

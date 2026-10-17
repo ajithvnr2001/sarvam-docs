@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/legacy/speech-to-text-translate/stt-translate/job/status/
 title: Batch - Get Status | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:13:59.930846+00:00
+fetched_at: 2026-10-17T14:23:27.460953+00:00
 ---
 
 # Batch - Get Status | Sarvam API Docs

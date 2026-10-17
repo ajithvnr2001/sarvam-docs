@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/voice-agents/build/tools/https-tool/
 title: API tool | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:15:24.227284+00:00
+fetched_at: 2026-10-17T14:23:19.243620+00:00
 ---
 
 # API tool | Sarvam API Docs
@@ -106,11 +106,14 @@ Because these are resolved at request time, a mid-call tool always sees the curr
 
 ## Network access
 
-If your endpoint sits behind a firewall or VPC (for example, an internal CRM), allowlist Sarvam’s IP so the platform can reach it:
+If your endpoint sits behind a firewall or VPC (for example, an internal CRM), allowlist Sarvam’s IPs so the platform can reach it:
 
-`4.213.167.70`
+  * `4.213.167.70`
+  * `35.154.84.150`
 
-Add this IP to your firewall or security group rules before testing the tool.
+
+
+Add these IPs to your firewall or security group rules before testing the tool.
 
 ## Typical build order
 
@@ -183,6 +186,7 @@ YesNo
   * Monitor
 
     * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+    * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
     * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
 
     * [Boards](https://docs.sarvam.ai/voice-agents/monitor/boards)
@@ -279,6 +283,7 @@ YesNo
   * [Best practices](https://docs.sarvam.ai/voice-agents/deploy/campaigns/best-practices)
   * [Deploy with Code (API & SDK)](https://docs.sarvam.ai/voice-agents/deploy/deploy-with-code)
   * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+  * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
   * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
   * [Overview tab](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/overview)
   * [Connectivity](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/connectivity)

@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/legacy/speech-to-text-translate/translate/ws/
 title: WebSocket | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:13:59.781844+00:00
+fetched_at: 2026-10-17T14:23:26.335410+00:00
 ---
 
 # WebSocket | Sarvam API Docs

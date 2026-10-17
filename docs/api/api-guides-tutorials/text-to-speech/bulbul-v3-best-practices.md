@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/bulbul-v3-best-practices/
 title: Best Practices for Bulbul v3 | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:22.986903+00:00
+fetched_at: 2026-10-17T14:23:32.555239+00:00
 ---
 
 # Best Practices for Bulbul v3 | Sarvam API Docs
@@ -34,6 +34,8 @@ Ask a question|Copy page|[View as Markdown](https://docs.sarvam.ai/api/api-guide
 This page is for Model APIs.
 
 This page covers **Bulbul v3** only (`model="bulbul:v3"` or omit `model` for the API default). For the latest persona-based model, see the [Best Practice Guide for Bulbul v4 Flash](https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/best-practices).
+
+Moving to v4 Flash? Follow [Migrating from Bulbul v3](https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/best-practices#migrating-from-bulbul-v3) for the parameter changes and a v3-to-v4 speaker mapping.
 
 Want to hear v3 speakers? See [Voices — Bulbul v3](https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/voices#bulbul-v3-speakers).
 

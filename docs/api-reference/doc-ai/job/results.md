@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/doc-ai/job/results/
 title: Get Job Results | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:13:56.690267+00:00
+fetched_at: 2026-10-17T14:23:29.400807+00:00
 ---
 
 # Get Job Results | Sarvam API Docs

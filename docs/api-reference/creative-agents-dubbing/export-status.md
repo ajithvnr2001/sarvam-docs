@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/creative-agents-dubbing/export-status/
 title: Export Status | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:13:53.011957+00:00
+fetched_at: 2026-10-17T14:23:30.347017+00:00
 ---
 
 # Export Status | Sarvam API Docs

@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/legacy/document-intelligence/get-status/
 title: Get Status | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:13:58.605952+00:00
+fetched_at: 2026-10-17T14:23:29.110767+00:00
 ---
 
 # Get Status | Sarvam API Docs

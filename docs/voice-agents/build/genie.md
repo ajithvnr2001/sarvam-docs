@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/voice-agents/build/genie/
 title: Genie | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:15:21.304924+00:00
+fetched_at: 2026-10-17T14:23:31.942677+00:00
 ---
 
 # Genie | Sarvam API Docs
@@ -13,11 +13,14 @@ Skip to navigation
 
 On this page
 
-  * Start from the Agents page
-  * Sessions & context
-  * Building and refining with Genie
-  * Suggestions and reviews
-  * What Genie can’t do (yet)
+  * Opening Genie
+  * Chats and context
+  * Build and refine agents
+  * Connect an agent to a phone number
+  * Create and run campaigns
+  * Analyze calls
+  * Confirmations and safeguards
+  * Good to know
 
 
 
@@ -31,52 +34,195 @@ Ask a question|Copy page|[View as Markdown](https://docs.sarvam.ai/voice-agents/
 
 This page is for Voice Agents.
 
-Genie is the AI assistant built into Voice Agents that helps you build and refine agents - drafting prompts, suggesting improvements, and reviewing your configuration.
+Genie is the AI assistant built into Voice Agents. Describe what you want in plain language and Genie does the work on the platform for you - from drafting a new agent, to putting it live on a phone number, to launching an outbound campaign and explaining why calls didn’t connect.
 
-## Start from the Agents page
+Describe an agent and Genie builds it, connects it to a phone number, launches an outbound campaign, and explains why calls dropped - all from one chat.
 
-On **Build → Agents** , describe what your agent should do in the prompt box. Genie starts a session and drafts the agent for you. Use **Create from Scratch** if you prefer a blank canvas instead.
+Area| What you can ask Genie to do  
+---|---  
+[**Build**](https://docs.sarvam.ai/voice-agents/build/genie#build-and-refine-agents)|  Create and edit agents - instructions, variables, tools, voice, languages, knowledge bases, and test suites.  
+[**Deploy**](https://docs.sarvam.ai/voice-agents/build/genie#connect-an-agent-to-a-phone-number)|  Find your phone numbers, put an agent live on a number for inbound calls, and place a test call to your phone.  
+[**Campaigns**](https://docs.sarvam.ai/voice-agents/build/genie#create-and-run-campaigns)|  Create outbound campaigns, upload contact lists, and pause, resume, edit, or cancel them.  
+[**Analyze**](https://docs.sarvam.ai/voice-agents/build/genie#analyze-calls)|  Summarize call performance, diagnose failed calls, read transcripts, check tool errors, and build Boards.  
+  
+Genie can only use the platform features available to your plan and workspace. If a feature (for example, workflows) isn’t enabled for your workspace, Genie will tell you it can’t do that yet.
 
-![The Agents page with the prompt "What should your agent do?", example text about a policy renewal reminder, Create from Scratch, and a Recents table.](https://docs.sarvam.ai/_fern-img/ece72fc4f618a55a0b8a4f72e3cb3acc4afcbf50e9b2008e44c472b18f64105b.webp)
+## Opening Genie
 
-Build an agent with Genie from the Agents homepage.
+Genie lives in a panel docked to the right of every Voice Agents page. Because the panel stays open as you move between pages, one conversation can span building an agent, deploying it, and checking its calls.
 
-## Sessions & context
+There are several ways to open it:
 
-Once you’re on the Canvas, open **Genie** from the top bar. Genie works against the agent you’re editing - it can see the current greeting, instructions, variables, tools, and settings, and suggests changes in that context.
-
-Suggested prompts appear when you open the panel (for example, rename the agent, switch the voice, or attach a knowledge base). Type a request in **What’s on your mind?** to ask for a specific change.
-
-![The Genie side panel open next to the Instructions editor, with suggested actions and a What's on your mind? input.](https://docs.sarvam.ai/_fern-img/17d737d0bdd99d14bc559b7a06d233830a651b935d35fcbd37ade488ba3103cb.webp)
-
-Genie on the Canvas: suggested prompts and a free-text request field.
-
-## Building and refining with Genie
-
-Typical ways to use Genie:
-
-  1. **Create** \- describe the agent on the Agents page; Genie drafts the greeting and instructions.
-  2. **Edit** \- on the Canvas, ask Genie to rewrite a section, tighten the greeting, change language/voice, or add a knowledge base.
-  3. **Inline** \- in the instruction editor, select text and use _Describe a change_ , or type `/` and ask Genie from the block menu. See [Navigating the build interface](https://docs.sarvam.ai/voice-agents/build/navigating-workspace).
+  * **Ask Genie** \- the button at the top right of the page header on Agents, Campaigns, Inbound calls, Boards, and other pages. It’s hidden while the Genie panel is already open.
+  * **Agents home** \- type into **What should your voice agent do?** on **Build → Agents**. Genie creates a new agent, opens it in the editor, and starts building from your description. Use **Create from scratch** if you’d rather start with a blank agent.
+  * **Improve with Genie** \- the button in the agent editor header. Genie and **Test agent** share the same side panel, so opening one closes the other.
+  * **Customise with AI** \- on a template, clones it and asks Genie to adapt it to your use case.
 
 
 
-## Suggestions and reviews
+![The Agents page with the Ask Genie button in the header, the prompt "What should your voice agent do?", and Create from scratch.](https://docs.sarvam.ai/_fern-img/f0cc6783f476163244bcfa873bf40138d543f9b8aa85f028af36cc0b67ad09ba.webp)
 
-Genie also reviews your agent and surfaces suggestions you can act on:
+The Agents homepage: describe an agent for Genie to build, or click Ask Genie at the top right to open the panel.
 
-  * **Suggestions** : flags issues and improvements across prompts, variables, and tools.
-  * **Reviewing suggestions** : step through each suggestion and accept or dismiss it.
-  * **View and hide suggestions** : toggle suggestions on or off to keep the canvas clean while you work.
-  * **Inline editing** : apply a suggestion directly, or edit the proposed change before accepting it.
-  * **Improve variable extraction prompt** : rewrite the prompt that extracts or updates a [variable](https://docs.sarvam.ai/voice-agents/build/variables-personalization).
-  * **Improve tool prompt** : improve a [tool’s](https://docs.sarvam.ai/voice-agents/build/tools) description so the model calls it at the right time with the right arguments.
+![The Genie panel docked on the right with the heading "What's on your mind?" and suggested prompts.](https://docs.sarvam.ai/_fern-img/aa1392d3c18ee8fdb049dee2e6affe0e24eef88d36b5863cbb57930aae77ff14.webp)
+
+The Genie panel, with starter suggestions and a message box.
+
+### Chats and context
+
+  * **Genie knows where you are.** Each message includes the page you’re on - the agent, campaign, knowledge base, or board you’re viewing - so “pause this campaign” or “why are calls failing here?” just works.
+  * **Chats belong to your workspace, not to a single agent.** Use **New chat** to start fresh and **Chat history** to search and reopen past chats. Genie reopens your most recent chat when you come back.
+  * **Pages refresh automatically.** When Genie changes something - an agent, a deployment, a campaign, a board - the page you have open updates without a reload.
+  * **Queue follow-ups.** You can type up to five more requests while Genie is working, or press **Stop** to cancel the current one.
+  * Rate any reply with **Good response** or **Bad response** to help us improve Genie.
 
 
 
-## What Genie can’t do (yet)
+## Build and refine agents
 
-Genie helps you author and refine agent configuration. It does not deploy campaigns, manage telephony, or replace testing in [test agent](https://docs.sarvam.ai/voice-agents/build/navigating-workspace#testing-the-agent).
+Describe the agent you want and Genie runs a guided build: it asks a few questions one at a time, shows a **Build plan** , and then works through it - inputs and outputs, tools, instructions, guardrails, greeting, languages, voice, call handling (voicemail and silence), and the call goal - before a final quality pass and a saved version. When the plan is done, a **Plan has been executed** strip appears with a **Test agent** button.
+
+On an existing agent, Genie makes simple changes directly and proposes a plan for larger ones. It can:
+
+  * Rewrite or tighten the [instructions](https://docs.sarvam.ai/voice-agents/build/system-prompt) and greeting, or restore the previous version of the prompt after a rewrite.
+  * Add or change [variables](https://docs.sarvam.ai/voice-agents/build/variables-personalization), including post-call extraction (for example, “did the customer promise to pay, and when?”).
+  * Set up [API tools](https://docs.sarvam.ai/voice-agents/build/tools/https-tool) through a setup card. Credentials go in a masked field and are never shown in chat.
+  * Configure [call transfer](https://docs.sarvam.ai/voice-agents/build/tools/call-transfer) to a human.
+  * Change [languages, voice, pitch, and pace](https://docs.sarvam.ai/voice-agents/build/voice-language), and add pronunciation rules.
+  * Create a [knowledge base](https://docs.sarvam.ai/voice-agents/build/knowledge-base) from files you upload in chat and attach it to the agent.
+  * Create [test suites and scenarios](https://docs.sarvam.ai/voice-agents/build/tests), run them, and summarize the results.
+  * Review the agent and resolve open suggestions on the canvas.
+
+
+
+![The Genie panel showing a completed five-step build plan for Priya, an EMI reminder agent, followed by its input and output variables.](https://docs.sarvam.ai/_fern-img/2a8d80d1b334abb00a460a031418cc3e0f31815e4029423a827574e8f52b8a0d.webp)
+
+Genie builds an agent from a one-line description: a build plan, then a saved version and a summary of its variables.
+
+###### Example prompts
+
+  * “Create a voice agent that calls customers 3 days before their EMI is due and reminds them to pay.”
+  * “Make the agent speak Hindi and Tamil too, and start in Hindi.”
+  * “Switch to a calmer female voice and slow the pace down a little.”
+  * “Capture whether the customer promised to pay and the promised date after each call.”
+  * “Transfer the call to a human when the caller asks for one.”
+  * “Create a few test scenarios for angry customers and run them.”
+
+
+
+In the editor, you can also select text in the instructions and type in **Describe a change…** for a targeted edit. See [Navigating the build interface](https://docs.sarvam.ai/voice-agents/build/navigating-workspace).
+
+## Connect an agent to a phone number
+
+Genie can take an agent from the editor to a live phone line. It can:
+
+  * List your [telephony connections and phone numbers](https://docs.sarvam.ai/voice-agents/deploy/telephony), and manage [number groups](https://docs.sarvam.ai/voice-agents/deploy/telephony/groups).
+  * Create an [inbound deployment](https://docs.sarvam.ai/voice-agents/deploy/inbounds) that puts an agent on one or more numbers, with optional answering hours (24/7 by default) and a call-end webhook.
+  * Pause, resume, or delete a deployment, or switch it to a newer version of the agent.
+  * Upload a known-callers list so the agent can greet returning callers by name.
+  * **Place a test call to your phone.** Genie first sends a one-time code by SMS to verify your number, then calls up to 10 verified numbers so you can hear the agent.
+
+
+
+Genie asks which connection to use and then which number. It only uses numbers that are already connected to your workspace - to add new numbers, see [Bring your own telephony](https://docs.sarvam.ai/voice-agents/deploy/telephony/bring-your-own) or [Rent from Sarvam](https://docs.sarvam.ai/voice-agents/deploy/telephony/rent-from-sarvam).
+
+![The Genie panel asking which phone number to use, then confirming the agent is live for inbound calls.](https://docs.sarvam.ai/_fern-img/96ad76994d3e638bcf76b940cf951b5843476b237188661bb7966939ca5eda8d.webp)
+
+Asking Genie to put an agent live on a phone number.
+
+###### Example prompts
+
+  * “Which phone numbers do we have connected?”
+  * “Put my Support Agent live on our Exotel number for inbound calls.”
+  * “Only answer calls Monday to Saturday, 9 am to 7 pm.”
+  * “Move the inbound deployment to the version I just saved.”
+  * “Call me so I can hear the agent.”
+  * “Pause the inbound line for the Collections agent.”
+
+
+
+Deployments and campaigns always run a **saved version** of your agent, never the unsaved draft. A test call can use the draft. Test calls are real calls and use credits.
+
+## Create and run campaigns
+
+Genie can set up and manage [outbound campaigns](https://docs.sarvam.ai/voice-agents/deploy/campaigns) end to end:
+
+  * **Create a campaign** with the agent and version, caller numbers, [dialing rate](https://docs.sarvam.ai/voice-agents/deploy/campaigns/dialing-rate), retry rules (for example, retry busy and no-answer twice after 30 minutes), calling window (days and hours, in IST by default), and start and end dates.
+  * **Upload contacts.** Share a CSV in chat and Genie maps its columns to the agent’s variables - phone number, customer name, due date, and so on. It reports how many rows were accepted and why any were rejected. See [Cohorts](https://docs.sarvam.ai/voice-agents/deploy/campaigns/cohorts).
+  * **Manage the campaign** \- pause, resume, extend the end date, change the calling window, or cancel it.
+  * **Webhooks** \- check call-end webhook deliveries and retry the ones that failed.
+  * **Do Not Disturb** \- add, remove, or look up numbers on your workspace’s [DND list](https://docs.sarvam.ai/voice-agents/deploy/campaigns/dnd), or import one from a CSV (where DND is enabled).
+
+
+
+A campaign starts dialing on its schedule as soon as it’s created, so Genie always asks you to confirm before creating one.
+
+![The Genie panel beside Outbound Campaigns, with answered questions for caller number and retries, and a summary of the new scheduled EMI reminder campaign.](https://docs.sarvam.ai/_fern-img/130e8a2cdfd9eae2a3468a1c832e5d51e4ec6bfb467cdd8603d197f17488f2cf.webp)
+
+Genie asks for the caller number and retry rules, then creates the campaign and summarizes its settings.
+
+###### Example prompts
+
+  * “Set up an outbound campaign for the EMI reminder agent, calling weekdays 10 am to 6 pm.”
+  * “Dial at 1 call per second and retry busy and no-answer twice after 30 minutes.”
+  * “Here’s the contact list. The phone column is ‘mobile’ and ‘name’ is the customer name.”
+  * “How many rows were rejected from the upload, and why?”
+  * “Pause the March reminders campaign.”
+  * “Add this number to the do-not-call list.”
+
+
+
+## Analyze calls
+
+Ask Genie questions about how your agents and campaigns are performing, and it pulls the data from [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics) and answers in chat:
+
+  * **Performance summaries** \- call volume, engagement, and connect rates for an agent, several agents, your whole workspace, or a single campaign, over any date range.
+  * **Why calls didn’t connect** \- a breakdown of non-connection reasons such as busy, no answer, or provider failures.
+  * **Find calls** \- list calls or dial attempts that match a filter, and open a call’s [transcript](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/call-logs) to explain what went wrong.
+  * **Tool health** \- error rates and latency for each of the agent’s tools, and the failed calls behind them.
+  * **Boards** \- for charts, Genie builds a [Board](https://docs.sarvam.ai/voice-agents/monitor/boards) with number, table, bar, or line widgets and filters, schedules regular deliveries, and exports widget data to CSV.
+
+
+
+Genie links to the relevant pages - such as call logs or analytics - so you can dig deeper.
+
+![The Genie panel answering "Why did so many calls fail yesterday?" with the connect rate, a table of non-connection reasons, key findings, and a call logs link.](https://docs.sarvam.ai/_fern-img/280024a4963f80ac4bafd36831bbf0cc60086a2b72f120040f8034c2cb10897c.webp)
+
+Genie explains why calls failed, with a breakdown of non-connection reasons and a link to the call logs.
+
+###### Example prompts
+
+  * “How did my collections agent do this week?”
+  * “What’s the connect rate for the March campaign, and why are calls not connecting?”
+  * “Show me calls from yesterday where the customer asked for a human.”
+  * “Pull the transcript of the last failed call and tell me what went wrong.”
+  * “Which of my agent’s tools are erroring most, and how slow is the payment lookup?”
+  * “Build a board with daily calls, connect rate, and average duration for the Sales agent, and email it to me every Monday.”
+
+
+
+## Confirmations and safeguards
+
+Genie can make real changes, so it checks with you before anything that places calls, affects live traffic, or can’t be undone. It shows a question card and waits for **Yes** or **No** :
+
+  * **Calls and live traffic** \- placing a test call, creating a campaign, switching a live deployment to a new version, or pausing a deployment.
+  * **Permanent changes** \- cancelling a campaign, deleting a deployment, connection, knowledge base, file, tool, variable, test scenario, secret, or board item, and replacing most of the agent’s instructions.
+  * **Editing a different agent** \- Genie can read any agent in your workspace, but it only edits the agent you’re working on or one you confirm (**Yes, edit it**).
+
+
+
+If you answer **No** , Genie stops and won’t retry unless you ask again.
+
+## Good to know
+
+  * Genie stays on platform tasks. It won’t answer general questions, and it won’t make up business details such as prices, policies, or API endpoints - it asks you instead.
+  * Never paste API keys or passwords into chat. Genie asks for credentials in a masked field or uses your [workspace secrets](https://docs.sarvam.ai/voice-agents/build/tools/https-tool).
+  * Genie writes agent configuration in English, and the platform handles translation to the agent’s other languages.
+  * Genie can’t delete agents.
+  * In the agent editor, you need the edit lock to message Genie. With view-only access, you can read the chat history but can’t send messages.
+  * For long tasks, Genie may pause with **Turn limit exceeded**. Click **Continue** to let it keep going.
+
+
 
 Was this page helpful?
 
@@ -118,6 +264,7 @@ YesNo
   * Monitor
 
     * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+    * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
     * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
 
     * [Boards](https://docs.sarvam.ai/voice-agents/monitor/boards)
@@ -214,6 +361,7 @@ YesNo
   * [Best practices](https://docs.sarvam.ai/voice-agents/deploy/campaigns/best-practices)
   * [Deploy with Code (API & SDK)](https://docs.sarvam.ai/voice-agents/deploy/deploy-with-code)
   * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+  * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
   * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
   * [Overview tab](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/overview)
   * [Connectivity](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/connectivity)

@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/doc-ai/job/digitise/
 title: Digitise Document | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:13:55.996438+00:00
+fetched_at: 2026-10-17T14:23:30.051594+00:00
 ---
 
 # Digitise Document | Sarvam API Docs

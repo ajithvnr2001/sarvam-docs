@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/voice-agents/build/voice-language/
 title: Speakers & voice | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:15:25.044434+00:00
+fetched_at: 2026-10-17T14:23:32.022761+00:00
 ---
 
 # Speakers & voice | Sarvam API Docs
@@ -37,6 +37,10 @@ Ask a question|Copy page|[View as Markdown](https://docs.sarvam.ai/voice-agents/
 
 This page is for Voice Agents.
 
+Bulbul V3 end of life on November 10, 2026
+
+Bulbul V3 reaches end of life on Voice Agents on **November 10, 2026**. Switch your agents to **Bulbul V4** before then in the [Model](https://docs.sarvam.ai/voice-agents/build/voice-language#model) setting, and use the [V3 to V4 name mapping](https://docs.sarvam.ai/voice-agents/build/voice-language#voice-name-changes-from-v3-to-v4) to keep the voice you use today. Bulbul V3 stays available on the [Text-to-Speech API](https://docs.sarvam.ai/api/getting-started/models/bulbul).
+
 Configure how the agent sounds. These controls live in the **Speaking** section of the agent’s [Settings](https://docs.sarvam.ai/voice-agents/build/conversation-settings).
 
 ## Voice
@@ -45,7 +49,7 @@ Pick the **voice** , who your agent sounds like (for example, `Shubh`). This is 
 
 ### Model
 
-Choose the text-to-speech model your agent speaks with: **Bulbul V3** or **Bulbul V4**. The model determines which voices are available in the catalog below.
+Choose the text-to-speech model your agent speaks with: **Bulbul V3** or **Bulbul V4**. The model determines which voices are available in the catalog below. Bulbul V3 reaches end of life on November 10, 2026, so pick **Bulbul V4** for new agents.
 
 ### Voice catalog
 
@@ -237,6 +241,7 @@ YesNo
   * Monitor
 
     * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+    * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
     * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
 
     * [Boards](https://docs.sarvam.ai/voice-agents/monitor/boards)
@@ -333,6 +338,7 @@ YesNo
   * [Best practices](https://docs.sarvam.ai/voice-agents/deploy/campaigns/best-practices)
   * [Deploy with Code (API & SDK)](https://docs.sarvam.ai/voice-agents/deploy/deploy-with-code)
   * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+  * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
   * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
   * [Overview tab](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/overview)
   * [Connectivity](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/connectivity)

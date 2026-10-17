@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/voice-cloning/delete-voice/
 title: Delete Voice | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:11.274388+00:00
+fetched_at: 2026-10-17T14:23:20.446468+00:00
 ---
 
 # Delete Voice | Sarvam API Docs

@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/pronunciation-dictionary/update/
 title: Update | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:02.470064+00:00
+fetched_at: 2026-10-17T14:23:25.521384+00:00
 ---
 
 # Update | Sarvam API Docs

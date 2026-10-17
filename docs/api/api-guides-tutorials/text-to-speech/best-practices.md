@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/best-practices/
 title: Best Practice Guide for Bulbul v4 Flash | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:22.864006+00:00
+fetched_at: 2026-10-17T14:23:32.858764+00:00
 ---
 
 # Best Practice Guide for Bulbul v4 Flash | Sarvam API Docs
@@ -17,6 +17,7 @@ On this page
   * Choosing the right endpoint
   * Quick start
   * HTTP streaming
+  * Single response (REST)
   * WebSocket
   * Parameter reference (v4 Flash)
   * Tuning guidance
@@ -39,6 +40,12 @@ On this page
   * Handling errors
   * WebSocket connection management
   * Key considerations
+  * Migrating from Bulbul v3
+  * What changes
+  * What stays the same
+  * Before and after
+  * Mapping v3 speakers to v4 personas
+  * Rollout checklist
   * Quick reference
 
 
@@ -53,15 +60,21 @@ Ask a question|Copy page|[View as Markdown](https://docs.sarvam.ai/api/api-guide
 
 This page is for Model APIs.
 
-Bulbul **v4 Flash** is Sarvam’s low-latency TTS tier for interactive workloads: voice agents, IVR, and anything where a listener is waiting for the first word. This guide applies only to **`model="bulbul:v4-flash"`** with persona **`speaker`** IDs (`voice_language_style`). For the stable **`bulbul:v3`** model (short names like `shubh`, `priya`), see [Bulbul v3 best practices](https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/bulbul-v3-best-practices).
+Bulbul **v4 Flash** is Sarvam’s low-latency TTS tier for interactive workloads — voice agents, IVR, and anything where a listener is waiting for the first word.
+
+This guide applies only to **`model="bulbul:v4-flash"`** with persona **`speaker`** IDs (`voice_language_style`). For the stable **`bulbul:v3`** model (short names like `shubh`, `priya`), see [Bulbul v3 best practices](https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/bulbul-v3-best-practices).
+
+**In a hurry?** POST to `/text-to-speech/stream`, set `language_code`, pick a persona `speaker`, and keep `enable_preprocessing: true`. Everything after the quick start is tuning.
 
 Preview voices before you ship: [Voices](https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/voices) lists every v4 Flash persona with audio samples.
+
+Already on `bulbul:v3`? Jump to [Migrating from Bulbul v3](https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/best-practices#migrating-from-bulbul-v3). Most integrations need only a new `model` and `speaker`.
 
 * * *
 
 ## What is Bulbul v4 Flash?
 
-Flash is the interactive tier of the v4 family. It runs on production infrastructure and is available over **three transports** (HTTP streaming, single-response REST, and WebSocket) so you can match your pipeline instead of forcing one mode.
+Flash is the interactive tier of the v4 family. It runs on production infrastructure and is available over **three transports** — HTTP streaming, single-response REST, and WebSocket — so you can match your pipeline instead of forcing one mode.
 
 Capability| Detail  
 ---|---  
@@ -78,7 +91,7 @@ Voice roster| **83** named personas, **224** speaker IDs on the API today.
 
 ## Choosing the right endpoint
 
-All transports serve the same model; they differ in latency, max sample rate, and how audio is delivered.
+All three transports serve the same model. They differ in latency, max sample rate, and how audio is delivered — so pick by what your listener experiences, not by habit.
 
 | **HTTP streaming**| **Single response (REST)**| **WebSocket**  
 ---|---|---|---  
@@ -90,7 +103,7 @@ All transports serve the same model; they differ in latency, max sample rate, an
   
 If a person is waiting to hear the first word, use **HTTP streaming** or **WebSocket**. The single-response endpoint finishes the full clip before replying, which listeners experience as dead air. Reserve REST for offline generation and when you need **32 / 44.1 / 48 kHz**.
 
-**Reuse connections:** Each new HTTPS connection pays DNS, TCP, and TLS before any audio work. Enable keep-alive or pool clients so one connection serves many synthesis calls.
+**Reuse connections:** each new HTTPS connection pays DNS, TCP, and TLS before any audio work. Enable keep-alive or pool clients so one connection serves many synthesis calls.
 
 See also [Which API to Use](https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/which-api-to-use).
 
@@ -98,34 +111,136 @@ See also [Which API to Use](https://docs.sarvam.ai/api/api-guides-tutorials/text
 
 ## Quick start
 
-### HTTP streaming
-    
-    
-    {
-    
-      "text": "नमस्ते! आपका order 2 दिन में deliver हो जाएगा।",
-    
-      "language_code": "hi-IN",
-    
-      "model": "bulbul:v4-flash",
-    
-      "speaker": "aparna_hi_customer",
-    
-      "speech_sample_rate": 24000,
-    
-      "output_audio_codec": "wav",
-    
-      "pace": 1.0,
-    
-      "enable_preprocessing": true
-    
-    }
+Three transports, one model. Copy the block for the endpoint you picked — Python first, then JavaScript and cURL.
 
-`POST https://api.sarvam.ai/text-to-speech/stream` with header `api-subscription-key`.
+### HTTP streaming
+
+Best for anything interactive. Audio starts flowing before the full clip is ready.
+
+PythonJavaScriptcURL
+    
+    
+    from sarvamai import SarvamAI
+    
+    client = SarvamAI(api_subscription_key="YOUR_SARVAM_API_KEY")
+    
+    with open("output.wav", "wb") as f:
+    
+        for chunk in client.text_to_speech.convert_stream(
+    
+            text="नमस्ते! आपका order 2 दिन में deliver हो जाएगा।",
+    
+            language_code="hi-IN",
+    
+            model="bulbul:v4-flash",
+    
+            speaker="aparna_hi_customer",
+    
+            speech_sample_rate=24000,
+    
+            output_audio_codec="wav",
+    
+            pace=1.0,
+    
+            enable_preprocessing=True,
+    
+        ):
+    
+            f.write(chunk)
+
+### Single response (REST)
+
+Use this for offline files and when you need up to 48 kHz. The response is JSON, so **decode the base64** before writing to disk.
+
+PythonJavaScriptcURL
+    
+    
+    import base64
+    
+    from sarvamai import SarvamAI
+    
+    client = SarvamAI(api_subscription_key="YOUR_SARVAM_API_KEY")
+    
+    audio = client.text_to_speech.convert(
+    
+        text="नमस्ते! आपका order 2 दिन में deliver हो जाएगा।",
+    
+        language_code="hi-IN",
+    
+        model="bulbul:v4-flash",
+    
+        speaker="aparna_hi_customer",
+    
+        speech_sample_rate=48000,
+    
+        output_audio_codec="wav",
+    
+        enable_preprocessing=True,
+    
+    )
+    
+    audio_bytes = base64.b64decode("".join(audio.audios))
+    
+    with open("output.wav", "wb") as f:
+    
+        f.write(audio_bytes)
 
 ### WebSocket
 
-Connect to `wss://api.sarvam.ai/text-to-speech/ws?model=bulbul:v4-flash` with `api-subscription-key` on the upgrade request. Per utterance, send **in order** :
+Best when one connection should carry many utterances — voice agents and multi-turn conversations. Connect once, then send **config → text → flush** per utterance.
+
+The SDK example below uses `send_completion_event=True` so the server signals when the last chunk for an utterance has been sent.
+
+PythonJavaScript
+    
+    
+    import asyncio
+    
+    import base64
+    
+    from sarvamai import AsyncSarvamAI, AudioOutput, EventResponse
+    
+    async def main():
+    
+        client = AsyncSarvamAI(api_subscription_key="YOUR_SARVAM_API_KEY")
+    
+        async with client.text_to_speech_streaming.connect(
+    
+            model="bulbul:v4-flash", send_completion_event=True
+    
+        ) as ws:
+    
+            await ws.configure(
+    
+                language_code="hi-IN",
+    
+                speaker="aparna_hi_customer",
+    
+                speech_sample_rate=24000,
+    
+                output_audio_codec="wav",
+    
+            )
+    
+            await ws.convert("नमस्ते! मैं आपकी कैसे मदद कर सकती हूँ?")
+    
+            await ws.flush()
+    
+            with open("output.wav", "wb") as f:
+    
+                async for message in ws:
+    
+                    if isinstance(message, AudioOutput):
+    
+                        f.write(base64.b64decode(message.data.audio))
+    
+                    elif isinstance(message, EventResponse) and message.data.event_type == "final":
+    
+                        break
+    
+    asyncio.run(main())
+
+Prefer the raw protocol? Connect to `wss://api.sarvam.ai/text-to-speech/ws?model=bulbul:v4-flash` with `api-subscription-key` on the upgrade request, then send these frames **in order** per utterance:
     
     
     {"type": "config", "data": {
@@ -154,6 +269,8 @@ Audio arrives as `{"type":"audio"}` messages with base64 in `data.audio`. Hold t
 
 ## Parameter reference (v4 Flash)
 
+Every field the model accepts. Values outside the allowed ranges return **400** — validate in your client to avoid wasting round trips on live calls.
+
 Field| Values| Notes  
 ---|---|---  
 `text`| string| Required.  
@@ -168,9 +285,9 @@ Field| Values| Notes
 `loudness`| 0.1 – 2.5, default **1.0**|  Output gain — prefer over downstream amplification.  
 `enable_preprocessing`| boolean| Normalises numbers, dates, mixed script before synthesis.  
   
-Values outside allowed ranges return **400**. Validate in your client to avoid wasted round trips on live calls.
-
 ### Tuning guidance
+
+Start at the defaults, then move one dial at a time and listen.
 
 Setting| Where it helps  
 ---|---  
@@ -180,6 +297,27 @@ Setting| Where it helps
 `pitch` ±0.1 – 0.2| Small brand-tone tweaks; audition larger shifts  
 `loudness` 1.0| Default unless matching a fixed telephony level  
   
+PythonJavaScript
+    
+    
+    audio = client.text_to_speech.convert(
+    
+        text="आपका payment कल तक पूरा हो जाएगा।",
+    
+        language_code="hi-IN",
+    
+        model="bulbul:v4-flash",
+    
+        speaker="shubh_en_recovery",
+    
+        pace=1.1,       # slightly brisk for a payment reminder
+    
+        pitch=0.0,      # keep the voice's identity
+    
+        loudness=1.0,   # match the platform, not the app
+    
+    )
+
 * * *
 
 ## Writing text for natural speech
@@ -219,10 +357,54 @@ Tamil| உங்கள் order deliver ஆகிவிடும்| Unga order 
 ### Let preprocessing handle numbers
 
 With `enable_preprocessing: true`, do **not** hand-expand numbers, dates, or currency into words — you will usually get a worse reading than the model’s language-specific rules.
+    
+    
+    audio = client.text_to_speech.convert(
+    
+        text="आपका bill ₹5,00,000 है, due date 15/03/2026 है।",
+    
+        language_code="hi-IN",
+    
+        model="bulbul:v4-flash",
+    
+        speaker="shubh_enhi_banking",
+    
+        enable_preprocessing=True,  # let the model read the number and date
+    
+    )
 
 ### Chunk on sentence boundaries
 
 Split long or LLM-generated text at **sentence** boundaries. Mid-sentence splits strand intonation and sound like an audible seam. Buffer LLM tokens until you have a full sentence, then synthesise.
+    
+    
+    import re
+    
+    def sentences(text):
+    
+        # Split after ., !, ?, or the Indic danda — keep the punctuation.
+    
+        return [s.strip() for s in re.split(r"(?<=[.!?।])\s+", text) if s.strip()]
+    
+    with open("output.wav", "wb") as f:
+    
+        for sentence in sentences(llm_output):
+    
+            for chunk in client.text_to_speech.convert_stream(
+    
+                text=sentence,
+    
+                language_code="hi-IN",
+    
+                model="bulbul:v4-flash",
+    
+                speaker="aparna_hi_customer",
+    
+                output_audio_codec="wav",
+    
+            ):
+    
+                f.write(chunk)
 
 ### Match voice to language
 
@@ -329,9 +511,7 @@ Malayalam, Odia| —| —| `ml-IN` and `od-IN` are valid codes, but the roster h
 
 REST returns base64 in the `audios` array. **Decode before writing to disk.**
 
-###### Python
-
-###### JavaScript
+PythonJavaScript
     
     
     import base64
@@ -366,6 +546,8 @@ Writing raw base64 to a file produces corrupted audio. Always decode first.
 
 ## Output formats and sample rates
 
+Pick the codec by destination, then the lowest sample rate your pipeline actually plays.
+
 Codec| Best for| Notes  
 ---|---|---  
 `wav`| Agents, post-processing, archival| Uncompressed  
@@ -397,6 +579,43 @@ Status| Meaning| Action
 On WebSocket, errors often arrive as `{"type":"error"}` followed by a close — **reconnect** before retrying.
 
 Log **`request_id`** from responses when debugging with support.
+    
+    
+    import time
+    
+    from sarvamai import SarvamAI
+    
+    from sarvamai.core.api_error import ApiError
+    
+    client = SarvamAI(api_subscription_key="YOUR_SARVAM_API_KEY")
+    
+    for attempt in range(4):
+    
+        try:
+    
+            audio = client.text_to_speech.convert(
+    
+                text="Hello from Sarvam AI!",
+    
+                language_code="en-IN",
+    
+                model="bulbul:v4-flash",
+    
+                speaker="simran_en_customer",
+    
+            )
+    
+            break
+    
+        except ApiError as e:
+    
+            if e.status_code == 429 and attempt < 3:
+    
+                time.sleep(2 ** attempt)  # exponential backoff
+    
+                continue
+    
+            raise
 
 * * *
 
@@ -414,6 +633,119 @@ Log **`request_id`** from responses when debugging with support.
   * For large numbers, use grouping that matches your locale (e.g. `10,000` or `5,00,000`) so preprocessing reads them correctly.
   * v4 Flash does **not** support SSML — use `pace`, `pitch`, `loudness`, and sentence-boundary chunking for rhythm.
   * Character limits apply per request/session (typically 2,500) — chunk at sentences.
+
+
+
+* * *
+
+## Migrating from Bulbul v3
+
+v4 Flash uses the same endpoints, auth, and request/response shape as `bulbul:v3`. For most integrations, migrating means changing two fields and re-tuning a few prosody settings.
+
+### What changes
+
+| `bulbul:v3`| `bulbul:v4-flash`| Action  
+---|---|---|---  
+`model`| `bulbul:v3` (also the default when omitted)| `bulbul:v4-flash`| **Set explicitly.** Omitting `model` still routes to v3.  
+`speaker`| Short names: `shubh`, `priya`, `ritu`| Persona IDs: `ritu_hi_customer`| **Required change.** v4 Flash rejects v3 short names with **400**.  
+Default speaker| `shubh`| `shubh_enhi_ads`| Always pass `speaker` so the voice doesn’t change without you noticing.  
+`temperature`| 0.01–1.0, default 0.6| Silently ignored| Remove it. Use `pace`, `pitch`, and the persona **style** instead.  
+`pitch` / `loudness`| Accepted| Accepted (-0.5–0.5 / 0.1–2.5)| Optional. Start at `0.0` / `1.0`.  
+Languages| All 11, including Malayalam and Odia| All 11 codes accepted, but no `ml` / `od` personas yet| Keep Malayalam and Odia traffic on v3 for now.  
+WebSocket| `?model=bulbul:v3`| `?model=bulbul:v4-flash`| `model` is a URL query parameter, not a `config` field.  
+  
+### What stays the same
+
+  * Endpoints: `POST /text-to-speech`, `POST /text-to-speech/stream`, and `wss://api.sarvam.ai/text-to-speech/ws`.
+  * Auth header (`api-subscription-key`), response shape (base64 `audios`), and WebSocket message sequence (`config` → `text` → `flush`).
+  * `pace` (0.5–2.0), `enable_preprocessing`, `dict_id` (pronunciation dictionaries), sample rates, codecs, and the 2,500-character limit.
+
+
+
+### Before and after
+
+###### Python
+
+###### WebSocket
+    
+    
+    # Before: Bulbul v3
+    
+    audio = client.text_to_speech.convert(
+    
+        text="नमस्ते! आपका order 2 दिन में deliver हो जाएगा।",
+    
+        model="bulbul:v3",
+    
+        language_code="hi-IN",
+    
+        speaker="ritu",
+    
+        pace=1.0,
+    
+        temperature=0.6,
+    
+    )
+    
+    # After: Bulbul v4 Flash
+    
+    audio = client.text_to_speech.convert(
+    
+        text="नमस्ते! आपका order 2 दिन में deliver हो जाएगा।",
+    
+        model="bulbul:v4-flash",
+    
+        language_code="hi-IN",
+    
+        speaker="ritu_hi_customer",
+    
+        pace=1.0,
+    
+    )
+
+### Mapping v3 speakers to v4 personas
+
+Every v3 voice exists in v4 Flash under one or more persona IDs. The table gives the closest **starting persona** for each one, matching the voice’s v4 display name in [Speakers & voice](https://docs.sarvam.ai/conversations/build/voice-language#voice-name-changes-from-v3-to-v4). Voices with several personas (Shubh, Ritu, Simran, Ishita, Ratan) often have a style that fits your use case better. Browse them on [Voices](https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/voices#bulbul-v4-flash-voices).
+
+v3 `speaker`| Start with| Other personas  
+---|---|---  
+`shubh`| `shubh_enhi_ads`| `shubh_hi_customer`, `shubh_hi_ecomm`, `shubh_en_recovery`, …  
+`ritu`| `ritu_hi_customer`| `ritu_hi_sales`, `ritu_hi_banking`, `ritu_hi_customer_warm`, …  
+`simran`| `simran_enhi_customer`| `simran_en_customer`, `simran_en_sales`, `simran_hi_recovery`, …  
+`ishita`| `ishita_enhi_customer`| `ishita_hi_banking`, `ishita_hi_edtech`, …  
+`priya`| `priya_hi_recovery`| —  
+`rohan`| `rohan_en_recovery`| —  
+`dev`| `dev_en_recovery`| `dev_en_conversational`  
+`sunny`| `sunny_enhi_customer`| `sunny_en_social`, `sunny_hi_ads`, `sunny_hi_reels`  
+`ratan`| `ratan_hi_latenight`| `ratan_hi_customer_expressive`, `ratan_hi_documentary`, …  
+`anand`| `anand_hi_news`| `anand_hi_documentary`, `anand_pa_customer`, …  
+`roopa`| `roopa_hi_narration`| `roopa_hi_companion`, `roopa_hi_recovery`, …  
+`varun`| `varun_en_suspense`| `varun_en_ads`  
+`pooja`| `pooja_gu_conversational`| `pooja_gu_customer`, `pooja_te_conversation`  
+`neha`| `neha_en_customer`| `neha_en_latenight`, `neha_mr_narration`  
+`tarun`| `tarun_hi_conversational`| `tarun_hi_sales`, `tarun_te_narration`  
+`aditya`| `aditya_hi_conversational`| `aditya_hi_sales`  
+`shreya`| `shreya_hi_conversational`| `shreya_hi_news`  
+`mani`| `mani_hi_conversational`| `mani_hi_devotional`  
+`kavitha`| `kavitha_te_narration`| `kavitha_te_conversation`  
+`rahul`, `kavya`, `amit`, `manan`, `sumit`, `kabir`, `aayan`, `ashutosh`, `mohit`| `<name>_hi_conversational`| —  
+`shruti`| `shruti_hi_edtech`| —  
+`suhani` / `rehan`| `suhani_hi_social` / `rehan_hi_social`| —  
+`advait`| `advait_hi_character`| —  
+`tanya`| `tanya_hi_narration`| —  
+`gokul` / `vijay`| `gokul_ta_narration` / `vijay_ta_narration`| —  
+`soham`| `soham_mr_narration`| —  
+  
+The same name doesn’t guarantee an identical sound. v4 personas are re-recorded per style, so audition the new persona with your own production copy before you switch.
+
+### Rollout checklist
+
+  1. **Find every call site.** Search for `bulbul:v3` and for calls that omit `model` (they default to v3).
+  2. **Swap`model` and `speaker`** using the table above. Remove `temperature`.
+  3. **Keep Malayalam (`ml-IN`) and Odia (`od-IN`) on v3** until v4 personas ship for them.
+  4. **Re-check your text.** v4 Flash is stricter about script: write Indic words in native script and English in Latin script (see [Writing text for natural speech](https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/best-practices#writing-text-for-natural-speech)).
+  5. **A/B on real traffic.** Route a slice of requests to v4 Flash, then compare time-to-first-audio, listener feedback, and pronunciation of names and numbers.
+  6. **Keep v3 as a fallback.** Both models share the same request shape, so rolling back means changing `model` and `speaker` again.
 
 
 

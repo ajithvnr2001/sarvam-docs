@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/pronunciation-dictionary/create/
 title: Create | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:00.855535+00:00
+fetched_at: 2026-10-17T14:23:26.465254+00:00
 ---
 
 # Create | Sarvam API Docs

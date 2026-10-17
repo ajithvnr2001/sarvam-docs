@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/chat/chat-completions-v2/
 title: Chat Completion V2 | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:13:51.946480+00:00
+fetched_at: 2026-10-17T14:23:31.862076+00:00
 ---
 
 # Chat Completion V2 | Sarvam API Docs

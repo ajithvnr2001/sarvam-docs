@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/overview/
 title: Chat Completion API | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:14.151580+00:00
+fetched_at: 2026-10-17T14:23:19.614153+00:00
 ---
 
 # Chat Completion API | Sarvam API Docs
@@ -132,6 +132,7 @@ Session affinity is currently supported on the **`gemma4`** model. Send the opti
   * Session IDs are scoped to your API subscription. Another customer who sends the same value does not share your session.
   * Use an opaque value such as a UUID. Do not put personal data in it.
   * The header is optional. Requests without it behave exactly as before, and responses are the same whether or not you send it.
+  * Other models (`sarvam-105b`, `glm5.3`, `deepseekv4.1-flash`) accept the header but ignore it.
   * When you contact support about a conversation, include its session ID.
 
 
@@ -185,6 +186,7 @@ Structured output (`response_format`)| | | |
 Log probabilities| | `400`| |  not returned  
 Multiple choices (`n` > 1)| | `400`| |   
 `parallel_tool_calls: false` enforced| | | |   
+Session affinity (`x-session-affinity`)| | | |   
   
 ###### V2 behaviour notes
 

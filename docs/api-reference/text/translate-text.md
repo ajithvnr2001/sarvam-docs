@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/text/translate-text/
 title: Text Translation | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:08.022567+00:00
+fetched_at: 2026-10-17T14:23:23.043321+00:00
 ---
 
 # Text Translation | Sarvam API Docs

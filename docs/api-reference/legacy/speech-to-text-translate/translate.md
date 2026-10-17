@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/legacy/speech-to-text-translate/translate/
 title: REST | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:13:59.622589+00:00
+fetched_at: 2026-10-17T14:23:26.682430+00:00
 ---
 
 # REST | Sarvam API Docs

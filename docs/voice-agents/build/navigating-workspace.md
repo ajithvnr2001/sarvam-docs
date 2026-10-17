@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/voice-agents/build/navigating-workspace/
 title: Navigating the build interface | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:15:22.156142+00:00
+fetched_at: 2026-10-17T14:23:32.296070+00:00
 ---
 
 # Navigating the build interface | Sarvam API Docs
@@ -143,7 +143,7 @@ Viewing an older version: read-only, with Revert to this version and Go to lates
 
 ## Genie
 
-The **✦** button in the top bar opens **Genie** , an AI copilot that edits the agent, proposes suggestions you can accept, and can commit changes and re-run tests. See [Genie](https://docs.sarvam.ai/voice-agents/build/genie).
+The **Improve with Genie** button in the top bar opens **Genie** , an AI assistant that edits the agent, proposes suggestions you can accept, and can commit changes and re-run tests. Genie can also connect the agent to a phone number, run campaigns, and analyze calls. See [Genie](https://docs.sarvam.ai/voice-agents/build/genie).
 
 ![The Genie chat panel open beside the Canvas, reviewing the agent and listing suggestions.](https://docs.sarvam.ai/_fern-img/70df25c34313792a2c5d327cb17996ce2ec31ae05f39ae880b8b014d17073ca7.webp)
 
@@ -224,6 +224,7 @@ YesNo
   * Monitor
 
     * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+    * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
     * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
 
     * [Boards](https://docs.sarvam.ai/voice-agents/monitor/boards)
@@ -320,6 +321,7 @@ YesNo
   * [Best practices](https://docs.sarvam.ai/voice-agents/deploy/campaigns/best-practices)
   * [Deploy with Code (API & SDK)](https://docs.sarvam.ai/voice-agents/deploy/deploy-with-code)
   * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+  * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
   * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
   * [Overview tab](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/overview)
   * [Connectivity](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/connectivity)

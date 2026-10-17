@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/call-logs/
 title: Call Logs | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:15:30.864845+00:00
+fetched_at: 2026-10-17T14:23:19.333067+00:00
 ---
 
 # Call Logs | Sarvam API Docs
@@ -95,6 +95,8 @@ Use Call Logs to **find** the call, then use [Log Analyser](https://docs.sarvam.
 
 Call detail (Unified View Details): transcript and recording.
 
+For details on the recording itself, including mono vs stereo channel layout and how to enable dual-channel recordings, see [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings).
+
 ## Column reference
 
 Visible labels can vary by org. Expand a group when you need the dictionary.
@@ -179,6 +181,7 @@ YesNo
   * Monitor
 
     * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+    * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
     * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
       * [Overview tab](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/overview)
       * [Connectivity](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/connectivity)
@@ -283,6 +286,7 @@ YesNo
   * [Best practices](https://docs.sarvam.ai/voice-agents/deploy/campaigns/best-practices)
   * [Deploy with Code (API & SDK)](https://docs.sarvam.ai/voice-agents/deploy/deploy-with-code)
   * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+  * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
   * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
   * [Overview tab](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/overview)
   * [Connectivity](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/connectivity)

@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/translate-document/doc-translation-trigger-export/
 title: Trigger Export | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:08.802160+00:00
+fetched_at: 2026-10-17T14:23:21.578350+00:00
 ---
 
 # Trigger Export | Sarvam API Docs

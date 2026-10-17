@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/voices/
 title: Voices | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:26.625775+00:00
+fetched_at: 2026-10-17T14:23:20.004897+00:00
 ---
 
 # Voices | Sarvam API Docs
@@ -766,9 +766,9 @@ Voice ID| Speaker| Style
 
 Voice ID| Speaker| Style  
 ---|---|---  
+`aravind_ta_ads`| Aravind| ads  
+`aravind_ta_suspense`| Aravind| suspense  
 `gokul_ta_narration`| Gokul| narration  
-`vetri_ta_ads`| Vetri| ads  
-`vetri_ta_suspense`| Vetri| suspense  
 `vijay_ta_narration`| Vijay| narration  
   
 ###### Telugu (te-IN) (4 voices)
@@ -792,7 +792,7 @@ Voice ID| Speaker| Style
 
 Voice ID| Speaker| Style  
 ---|---|---  
-`bappa_bn_conversation`| Bappa| conversation  
+`arnab_bn_conversation`| Arnab| conversation  
 `roopa_bn_conversational`| Roopa| conversational  
 `bimal_bn_suspense`| Bimal| suspense  
   
@@ -893,7 +893,7 @@ For **v4 Flash** , start from the [use-case voice rankings](https://docs.sarvam.
     
         language_code="hi-IN",
     
-        speaker="ishita"
+        speaker="ishita_hi_ads"
     
     )
     

@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/voice-agents/build/overview/
 title: Build Voice Agents: Concepts, Primitives, and Workflow | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:15:22.003668+00:00
+fetched_at: 2026-10-17T14:23:32.080855+00:00
 ---
 
 # Build Voice Agents: Concepts, Primitives, and Workflow | Sarvam API Docs
@@ -63,7 +63,7 @@ The workflow from first draft to a deployed agent you keep improving.
 
 ## 4\. Navigating the workspace & Genie
 
-[Navigating the build interfaceVersions, canvas, settings, and the things to be careful about.](https://docs.sarvam.ai/voice-agents/build/navigating-workspace)[GenieThe AI assistant that helps you build and review agents.](https://docs.sarvam.ai/voice-agents/build/genie)
+[Navigating the build interfaceVersions, canvas, settings, and the things to be careful about.](https://docs.sarvam.ai/voice-agents/build/navigating-workspace)[GenieThe AI assistant that builds agents, connects them to phone numbers, runs campaigns, and analyzes calls.](https://docs.sarvam.ai/voice-agents/build/genie)
 
 ## 5\. Advanced concepts
 
@@ -111,6 +111,7 @@ YesNo
   * Monitor
 
     * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+    * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
     * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
 
     * [Boards](https://docs.sarvam.ai/voice-agents/monitor/boards)
@@ -207,6 +208,7 @@ YesNo
   * [Best practices](https://docs.sarvam.ai/voice-agents/deploy/campaigns/best-practices)
   * [Deploy with Code (API & SDK)](https://docs.sarvam.ai/voice-agents/deploy/deploy-with-code)
   * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+  * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
   * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
   * [Overview tab](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/overview)
   * [Connectivity](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/connectivity)

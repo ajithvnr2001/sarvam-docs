@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/rest-api/
 title: Text-to-Speech Rest API | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:25.366256+00:00
+fetched_at: 2026-10-17T14:23:20.263397+00:00
 ---
 
 # Text-to-Speech Rest API | Sarvam API Docs
@@ -79,7 +79,7 @@ Speed up or slow down speech with the `pace` parameter, range `0.5` to `2.0` for
 
 Flexible Sample Rates
 
-8kHz to 48kHz output. Higher rates (32k, 44.1k, 48k) available in **v3 REST API only**. Default: 24kHz.
+8kHz to 48kHz output. Higher rates (32k, 44.1k, 48k) are available on **REST only** (all Bulbul models; streaming caps at 24kHz). Default: 24kHz.
 
 Multiple Audio Formats
 

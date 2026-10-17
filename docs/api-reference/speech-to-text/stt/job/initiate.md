@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/speech-to-text/stt/job/initiate/
 title: Batch - Initiate Job | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:02.797637+00:00
+fetched_at: 2026-10-17T14:23:24.693482+00:00
 ---
 
 # Batch - Initiate Job | Sarvam API Docs

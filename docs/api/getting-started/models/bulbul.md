@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/getting-started/models/bulbul/
 title: Bulbul | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:33.532538+00:00
+fetched_at: 2026-10-17T14:23:19.729198+00:00
 ---
 
 # Bulbul | Sarvam API Docs
@@ -17,7 +17,11 @@ On this page
   * Bulbul v4 Flash vs v3
   * Key Features
   * Language Support
+  * Bulbul v3
+  * Bulbul v4 Flash
   * Available Speakers
+  * Bulbul v3
+  * Bulbul v4 Flash
   * Key Capabilities
   * Limits
   * Known Limitations
@@ -66,9 +70,13 @@ For new integrations, set `model="bulbul:v4-flash"` in any of the requests below
 
 ## Key Features
 
-30+ Speaker Voices
+200+ Persona Voices (v4 Flash)
 
-Wide selection of natural-sounding voices including Shubh, Aditya, Ritu, Simran, Anand, Roopa, Priya, and more.
+222 persona voices on `bulbul:v4-flash`, organized by language and style (for example `simran_en_customer`, `ishita_hi_devotional`).
+
+30+ Speaker Voices (v3)
+
+On `bulbul:v3`: natural-sounding voices including Shubh, Aditya, Ritu, Simran, Anand, Roopa, Priya, and more.
 
 Extended Character Limit
 
@@ -78,9 +86,9 @@ Sample Rate Options
 
 REST accepts 8000–48000 Hz (see [Limits](https://docs.sarvam.ai/api/getting-started/models/bulbul#limits)). Streaming accepts 8000–24000 Hz. Omitted → 22050 Hz output.
 
-Language Support
+Language Support (v3)
 
-Support for 11 languages (10 Indian + English) with BCP-47 codes. The target language code is primarily used by the pre-TTS text normalization model.
+On `bulbul:v3`: support for 11 languages (10 Indian + English) with BCP-47 codes. The target language code is primarily used by the pre-TTS text normalization model.
 
 Natural Prosody
 
@@ -92,15 +100,25 @@ Adjustable speech speed from 0.5x to 2.0x for customized delivery.
 
 ## Language Support
 
+### Bulbul v3
+
 Bulbul v3 supports the following Indian languages:
 
 Hindi (`hi-IN`), Bengali (`bn-IN`), Tamil (`ta-IN`), Telugu (`te-IN`), Gujarati (`gu-IN`), Kannada (`kn-IN`), Malayalam (`ml-IN`), Marathi (`mr-IN`), Punjabi (`pa-IN`), Odia (`od-IN`), English (`en-IN`)
 
+### Bulbul v4 Flash
+
+Bulbul v4 Flash voices cover Hindi, English, English–Hindi (`enhi`), Bengali, Gujarati, Kannada, Marathi, Punjabi, Tamil, and Telugu. Malayalam and Odia are not yet offered on v4 Flash.
+
 ## Available Speakers
+
+### Bulbul v3
 
 Bulbul v3 offers 30+ speaker voices:
 
 **Speakers:** Shubh (default), Aditya, Ritu, Priya, Neha, Rahul, Pooja, Rohan, Simran, Kavya, Amit, Dev, Ishita, Shreya, Ratan, Varun, Manan, Sumit, Roopa, Kabir, Aayan, Ashutosh, Advait, Anand, Tanya, Tarun, Sunny, Mani, Gokul, Vijay, Shruti, Suhani, Mohit, Kavitha, Rehan, Soham, Rupali
+
+### Bulbul v4 Flash
 
 Bulbul v4 Flash offers 200+ persona voices (222 catalog IDs). Most IDs follow `<name>_<language>_<style>` (for example `ishita_hi_devotional`, `simran_en_customer`); some use the `enhi` tag for English–Hindi code-mixed styles. Browse the full catalog on the [Voices page](https://docs.sarvam.ai/api/api-guides-tutorials/text-to-speech/voices#bulbul-v4-flash-voices).
 
