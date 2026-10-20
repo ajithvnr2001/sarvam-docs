@@ -2,4 +2,6 @@
 # ONE-TIME: attach as cloud-init custom-data on the spot-VM template.
 # Every new VM then reinstalls + starts the crawler from /data on first boot.
 runcmd:
-  - [bash, /data/opencode/sarvam/boot.sh]
+  # boot-all.sh waits for /data to mount (cloud-init can run before it) and
+  # restores systemd units for every VM-managed site
+  - [bash, /data/opencode/boot-all.sh]
