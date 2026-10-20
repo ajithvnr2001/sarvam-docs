@@ -576,6 +576,12 @@ async def main(max_pages=15000, concurrency=12):
         "tools": ["scrapling (Fetcher)", "crawl4ai (AsyncWebCrawler fallback)", "scrapegraph-ai (cleanup_html/convert_to_md)"],
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
+    try:  # merge over existing manifest: preserves updater stamps (last_verified) across boot-time resume runs
+        prev = json.loads(MANIFEST_FILE.read_text()) if MANIFEST_FILE.exists() else {}
+        prev.update(manifest)
+        manifest = prev
+    except Exception as e:
+        print(f"[manifest] merge skipped: {e}")
     MANIFEST_FILE.write_text(json.dumps(manifest, indent=2))
     print(f"[done] visited={len(visited)} failed={len(failed)} elapsed={manifest['elapsed_sec']}s")
     print(f"[done] manifest -> {MANIFEST_FILE}")
