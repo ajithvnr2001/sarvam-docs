@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/getting-started/models/
 title: Models | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:33.333745+00:00
+fetched_at: 2026-10-21T06:39:19.510759+00:00
 ---
 
 # Models | Sarvam API Docs
@@ -49,10 +49,13 @@ New to building for Indian languages? Start with [Building for Indian Languages]
 
 Model| API| Description  
 ---|---|---  
-[Saaras v4](https://docs.sarvam.ai/api/getting-started/models/saaras)| Speech to Text| State-of-the-art ASR with 23 language support (22 Indian + Global/Indian English) and multiple output modes: transcribe, translate, verbatim, translit, codemix. Default, recommended model; v3 remains available.  
-[Bulbul v3](https://docs.sarvam.ai/api/getting-started/models/bulbul)| Text to Speech| Natural-sounding voices for 11 languages (10 Indian + English) with customizable pitch, pace, and speaker options.  
+[Saaras v4](https://docs.sarvam.ai/api/getting-started/models/saaras)| Speech to Text| Latest, default ASR model — 23 language support (22 Indian + Global/Indian English) and multiple output modes: transcribe, translate, verbatim, translit, codemix.  
+[Saaras v3](https://docs.sarvam.ai/api/getting-started/models/saaras)| Speech to Text| Previous ASR model, still available — 23 languages (22 Indian + Indian English) with the same output modes as v4, without Global English.  
+[Bulbul v4 Flash](https://docs.sarvam.ai/api/getting-started/models/bulbul)| Text to Speech| Latest text-to-speech model — 200+ persona voices with natural prosody, and the same request/response contract as v3.  
+[Bulbul v3](https://docs.sarvam.ai/api/getting-started/models/bulbul)| Text to Speech| Stable text-to-speech model with 30+ named speakers across 11 languages (10 Indian + English). The API default when `model` is omitted.  
 [Sarvam Instant Voice Cloning](https://docs.sarvam.ai/api/api-guides-tutorials/voice-cloning/overview)| Instant Voice Cloning (Beta)| Create a voice from a short reference clip and synthesize speech with it across 12 Indian languages - clone inline per request, or save the voice once and reuse its ID.  
-[Sarvam-105B](https://docs.sarvam.ai/api/getting-started/models/sarvam-105b)| Chat Completion| 105B parameter flagship model, `sarvam-105b` for complex reasoning and agentic tasks, plus `sarvam-105b-conversations` for real-time dialogue and voice agents.  
+[Sarvam-105B](https://docs.sarvam.ai/api/getting-started/models/sarvam-105b)| Chat Completion| 105B parameter flagship model (`sarvam-105b`) for complex reasoning, coding, and agentic tasks.  
+[Sarvam-105B Conversations](https://docs.sarvam.ai/api/getting-started/models/sarvam-105b)| Chat Completion| Conversational variant (`sarvam-105b-conversations`), post-trained for real-time dialogue and voice agents.  
 [Mayura](https://docs.sarvam.ai/api/getting-started/models/mayura)| Text Translation| High-quality translation between 11 languages (10 Indian + English) with context preservation.  
 [Sarvam-Translate](https://docs.sarvam.ai/api/getting-started/models/sarvam-translate)| Text Translation| Extended translation support for all 23 languages (22 Indian + English) with superior accuracy.  
 [Sarvam Vision](https://docs.sarvam.ai/api/getting-started/models/sarvam-vision)| Document Intelligence| Extract and digitize content from documents in 23 languages with accurate OCR and structured output.  
@@ -78,12 +81,15 @@ Language coverage varies by model. Check the table below before picking one. Ful
 Model| Languages| Status  
 ---|---|---  
 **Saaras v4** (Speech to Text)| 23 (22 Indian + Global/Indian English), [full list](https://docs.sarvam.ai/api/getting-started/models/saaras#language-support)| Recommended  
+**Saaras v3** (Speech to Text)| 23 (22 Indian + Indian English), [full list](https://docs.sarvam.ai/api/getting-started/models/saaras#language-support)| Active  
 **Sarvam Translate** (Text Translation)| 23 (22 Indian + English), [full list](https://docs.sarvam.ai/api/getting-started/models/sarvam-translate#language-support)| Active  
 **Sarvam Vision** (Document Intelligence)| 23 (22 Indian + English), [full list](https://docs.sarvam.ai/api/getting-started/models/sarvam-vision#supported-languages)| Active  
-**Bulbul v3** (Text to Speech)| 11 (10 Indian + English), [full list](https://docs.sarvam.ai/api/getting-started/models/bulbul#language-support)| Active  
+**Bulbul v4 Flash** (Text to Speech)| 10 (Hindi, English, English–Hindi, Bengali, Gujarati, Kannada, Marathi, Punjabi, Tamil, Telugu), [full list](https://docs.sarvam.ai/api/getting-started/models/bulbul#language-support)| Latest  
+**Bulbul v3** (Text to Speech)| 11 (10 Indian + English), [full list](https://docs.sarvam.ai/api/getting-started/models/bulbul#language-support)| Active (API default)  
 **Sarvam Instant Voice Cloning**|  12 Indian languages, [full list](https://docs.sarvam.ai/api/api-guides-tutorials/voice-cloning/supported-languages)| Active (Beta)  
 **Mayura** (Text Translation)| 11 (10 Indian + English), [full list](https://docs.sarvam.ai/api/getting-started/models/mayura#language-support)| Active  
-**Sarvam-105B** (Chat LLM)| 11 (10 Indian + English), `sarvam-105b`, `sarvam-105b-conversations`| Active  
+**Sarvam-105B** (Chat LLM)| 11 (10 Indian + English), `sarvam-105b`| Active  
+**Sarvam-105B Conversations** (Chat LLM)| 11 (10 Indian + English), `sarvam-105b-conversations`| Active  
 **GLM-5.3** (Chat LLM, [open-weight](https://docs.sarvam.ai/api/getting-started/models/openweight))| See the model page for language coverage| Beta  
 **Gemma 4 31B** (Chat LLM, [open-weight](https://docs.sarvam.ai/api/getting-started/models/openweight))| See the model page for language coverage| Beta  
 **DeepSeek V4.1 Flash** (Chat LLM, [open-weight](https://docs.sarvam.ai/api/getting-started/models/openweight))| See the model page for language coverage| Beta  
