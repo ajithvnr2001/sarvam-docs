@@ -6,7 +6,7 @@ for i in $(seq 1 60); do
   sleep 5
 done
 [ -d /data/opencode ] || { echo "FATAL: /data not mounted"; exit 1; }
-for b in /data/opencode/gcpdocs/boot.sh /data/opencode/sarvam/boot.sh; do
+for b in /data/opencode/gcpdocs/boot.sh /data/opencode/sarvam/boot.sh /data/opencode/canva/boot.sh; do
   echo "== $(date -u +%FT%TZ) running $b"
   bash "$b" || echo "WARN: $b failed"
 done
