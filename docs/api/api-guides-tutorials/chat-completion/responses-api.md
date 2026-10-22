@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/responses-api/
 title: Responses API | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:13.553390+00:00
+fetched_at: 2026-10-22T06:32:45.427283+00:00
 ---
 
 # Responses API | Sarvam API Docs
@@ -29,15 +29,13 @@ Scroll to top
 
 # Responses API
 
-Beta
-
 Ask a question|Copy page|[View as Markdown](https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/responses-api.md "View this page as plain text")|More actions
 
 This page is for Model APIs.
 
 The Responses API provides an OpenAI-compatible interface for text generation, reasoning, structured output, and tool calling. **Streaming is optional** : the same pattern as [Chat Completion V2](https://docs.sarvam.ai/api-reference/chat/chat-completions-v2): omit `stream` or set it to `false` for one JSON response (default).
 
-The Responses API is available in **beta** with `sarvam-105b`, `glm5.3`, `gemma4`, and `deepseekv4.1-flash`. Access is granted per API key, [contact us](https://docs.sarvam.ai/api/getting-started/help) to request access.
+The Responses API supports `sarvam-105b`, `glm5.3`, `gemma4`, and `deepseekv4.1-flash`.
 
 ## Create a response
 
@@ -198,7 +196,7 @@ YesNo
 
     * Large Language Models
       * [Chat Completion](https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/overview)
-      * [Responses APIBeta](https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/responses-api)
+      * [Responses API](https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/responses-api)
       * How-to
 
     * Speech to Text

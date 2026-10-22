@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/chat/chat-completions-v2/
 title: Chat Completion V2 | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T14:23:31.862076+00:00
+fetched_at: 2026-10-22T06:32:57.649964+00:00
 ---
 
 # Chat Completion V2 | Sarvam API Docs
@@ -16,8 +16,6 @@ This page is for API Reference.
 [APIs](https://docs.sarvam.ai/api-reference/speech-to-text/transcribe)[Chat Completion](https://docs.sarvam.ai/api-reference/chat/chat-completions-v1)
 
 # Chat Completion V2
-
-Beta
 
 Ask a question|Copy page|[View as Markdown](https://docs.sarvam.ai/api-reference/chat/chat-completions-v2.md "View this page as plain text")|More actions
 
@@ -129,7 +127,7 @@ Try it
 
 Creates a model response for the given chat conversation, using an OpenAI-compatible request and response shape.
 
-Requires `api-subscription-key` with beta access to this endpoint.
+Requires `api-subscription-key`.
 
 **Streaming is optional.** Default is one JSON response (`stream` omitted or `false`). Set `stream: true` for server-sent events; the stream ends with a `[DONE]` line.
 
@@ -356,7 +354,7 @@ YesNo
 
     * [Introduction](https://docs.sarvam.ai/api-reference/introduction)
     * [Authentication](https://docs.sarvam.ai/api-reference/authentication)
-    * [Access to Beta APIs](https://docs.sarvam.ai/api-reference/beta-apis)
+    * [Beta APIs and Models](https://docs.sarvam.ai/api-reference/beta-apis)
     * [Meta Prompt Guide](https://docs.sarvam.ai/api-reference/metaprompt)
   * APIs
 
@@ -372,11 +370,11 @@ YesNo
 
     * Chat Completion
       * [POSTChat Completion V1](https://docs.sarvam.ai/api-reference/chat/chat-completions-v1)
-      * [POSTChat Completion V2Beta](https://docs.sarvam.ai/api-reference/chat/chat-completions-v2)
-      * [GETGet Model V2Beta](https://docs.sarvam.ai/api-reference/chat/model-v2)
-      * [GETList Models V2Beta](https://docs.sarvam.ai/api-reference/chat/models-v2)
+      * [POSTChat Completion V2](https://docs.sarvam.ai/api-reference/chat/chat-completions-v2)
+      * [GETGet Model V2](https://docs.sarvam.ai/api-reference/chat/model-v2)
+      * [GETList Models V2](https://docs.sarvam.ai/api-reference/chat/models-v2)
 
-    * Responses APIBeta
+    * Responses API
 
     * Content Studio - Dubbing
 
@@ -412,7 +410,7 @@ YesNo
 
   * [Introduction](https://docs.sarvam.ai/api-reference/introduction)
   * [Authentication](https://docs.sarvam.ai/api-reference/authentication)
-  * [Access to Beta APIs](https://docs.sarvam.ai/api-reference/beta-apis)
+  * [Beta APIs and Models](https://docs.sarvam.ai/api-reference/beta-apis)
   * [Meta Prompt Guide](https://docs.sarvam.ai/api-reference/metaprompt)
   * [REST](https://docs.sarvam.ai/api-reference/speech-to-text/transcribe)
   * [Batch - Initiate Job](https://docs.sarvam.ai/api-reference/speech-to-text/stt/job/initiate)

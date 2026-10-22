@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api-reference/speech-to-text/stt/job/initiate/
 title: Batch - Initiate Job | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T14:23:24.693482+00:00
+fetched_at: 2026-10-22T06:32:50.921533+00:00
 ---
 
 # Batch - Initiate Job | Sarvam API Docs
@@ -137,7 +137,7 @@ YesNo
 
     * [Introduction](https://docs.sarvam.ai/api-reference/introduction)
     * [Authentication](https://docs.sarvam.ai/api-reference/authentication)
-    * [Access to Beta APIs](https://docs.sarvam.ai/api-reference/beta-apis)
+    * [Beta APIs and Models](https://docs.sarvam.ai/api-reference/beta-apis)
     * [Meta Prompt Guide](https://docs.sarvam.ai/api-reference/metaprompt)
   * APIs
 
@@ -160,7 +160,7 @@ YesNo
 
     * Chat Completion
 
-    * Responses APIBeta
+    * Responses API
 
     * Content Studio - Dubbing
 
@@ -196,7 +196,7 @@ YesNo
 
   * [Introduction](https://docs.sarvam.ai/api-reference/introduction)
   * [Authentication](https://docs.sarvam.ai/api-reference/authentication)
-  * [Access to Beta APIs](https://docs.sarvam.ai/api-reference/beta-apis)
+  * [Beta APIs and Models](https://docs.sarvam.ai/api-reference/beta-apis)
   * [Meta Prompt Guide](https://docs.sarvam.ai/api-reference/metaprompt)
   * [REST](https://docs.sarvam.ai/api-reference/speech-to-text/transcribe)
   * [Batch - Initiate Job](https://docs.sarvam.ai/api-reference/speech-to-text/stt/job/initiate)

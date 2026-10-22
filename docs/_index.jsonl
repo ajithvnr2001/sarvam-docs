@@ -3,7 +3,7 @@
 {"url": "https://docs.sarvam.ai/", "file": "_index.md", "title": "AI for all from India | Sarvam API Docs", "method": "scrapling+scrapegraph"}
 {"url": "https://docs.sarvam.ai/api-reference/analytics/attempts/", "file": "api-reference/analytics/attempts.md", "title": "Get attempts | Sarvam API Docs", "method": "scrapling+scrapegraph"}
 {"url": "https://docs.sarvam.ai/api-reference/analytics/recordings/", "file": "api-reference/analytics/recordings.md", "title": "Get recordings | Sarvam API Docs", "method": "scrapling+scrapegraph"}
-{"url": "https://docs.sarvam.ai/api-reference/beta-apis/", "file": "api-reference/beta-apis.md", "title": "Access to Beta APIs | Sarvam API Docs", "method": "scrapling+scrapegraph"}
+{"url": "https://docs.sarvam.ai/api-reference/beta-apis/", "file": "api-reference/beta-apis.md", "title": "Beta APIs and Models | Sarvam API Docs", "method": "scrapling+scrapegraph"}
 {"url": "https://docs.sarvam.ai/api-reference/analytics/interactions/", "file": "api-reference/analytics/interactions.md", "title": "Get interactions | Sarvam API Docs", "method": "scrapling+scrapegraph"}
 {"url": "https://docs.sarvam.ai/api-reference/boards/create/", "file": "api-reference/boards/create.md", "title": "Create board | Sarvam API Docs", "method": "scrapling+scrapegraph"}
 {"url": "https://docs.sarvam.ai/api-reference/boards/duplicate/", "file": "api-reference/boards/duplicate.md", "title": "Duplicate board | Sarvam API Docs", "method": "scrapling+scrapegraph"}
@@ -1086,3 +1086,4 @@
 {"url": "https://sarvam.ai/api/cookbook/", "file": "_subdomains/sarvam.ai/api/cookbook.md", "title": "Page not found | Sarvam AI", "method": "crawl4ai+scrapegraph (scrapling: scrapling status 404)"}
 {"url": "https://docs.sarvam.ai/changelog/2026/10/16/", "file": "changelog/2026/10/16.md", "title": "October 16, 2026 | Sarvam API Docs", "method": "scrapling+scrapegraph"}
 {"url": "https://docs.sarvam.ai/voice-agents/monitor/call-recordings/", "file": "voice-agents/monitor/call-recordings.md", "title": "Call recordings | Sarvam API Docs", "method": "scrapling+scrapegraph"}
+{"url": "https://docs.sarvam.ai/changelog/2026/10/22/", "file": "changelog/2026/10/22.md", "title": "October 22, 2026 | Sarvam API Docs", "method": "scrapling+scrapegraph"}

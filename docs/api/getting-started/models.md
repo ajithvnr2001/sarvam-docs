@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/getting-started/models/
 title: Models | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-21T06:39:19.510759+00:00
+fetched_at: 2026-10-22T06:32:45.512908+00:00
 ---
 
 # Models | Sarvam API Docs
@@ -64,8 +64,6 @@ Model| API| Description
 
 Open-weight models are available on **`/v2`** using the same Sarvam API key and credits.
 
-GLM-5.3, Gemma 4 31B, and DeepSeek V4.1 Flash are **available in beta** and rolling out gradually. See [Access to Beta APIs](https://docs.sarvam.ai/api-reference/beta-apis).
-
 Model| Context window| Modality| Reasoning  
 ---|---|---|---  
 [GLM-5.3](https://docs.sarvam.ai/api/getting-started/models/openweight/glm-5-3)| 1,048,576 tokens| Text → text| Yes  
@@ -90,9 +88,9 @@ Model| Languages| Status
 **Mayura** (Text Translation)| 11 (10 Indian + English), [full list](https://docs.sarvam.ai/api/getting-started/models/mayura#language-support)| Active  
 **Sarvam-105B** (Chat LLM)| 11 (10 Indian + English), `sarvam-105b`| Active  
 **Sarvam-105B Conversations** (Chat LLM)| 11 (10 Indian + English), `sarvam-105b-conversations`| Active  
-**GLM-5.3** (Chat LLM, [open-weight](https://docs.sarvam.ai/api/getting-started/models/openweight))| See the model page for language coverage| Beta  
-**Gemma 4 31B** (Chat LLM, [open-weight](https://docs.sarvam.ai/api/getting-started/models/openweight))| See the model page for language coverage| Beta  
-**DeepSeek V4.1 Flash** (Chat LLM, [open-weight](https://docs.sarvam.ai/api/getting-started/models/openweight))| See the model page for language coverage| Beta  
+**GLM-5.3** (Chat LLM, [open-weight](https://docs.sarvam.ai/api/getting-started/models/openweight))| See the model page for language coverage| Active  
+**Gemma 4 31B** (Chat LLM, [open-weight](https://docs.sarvam.ai/api/getting-started/models/openweight))| See the model page for language coverage| Active  
+**DeepSeek V4.1 Flash** (Chat LLM, [open-weight](https://docs.sarvam.ai/api/getting-started/models/openweight))| See the model page for language coverage| Active  
   
 ### 23-language set (Saaras v4, Sarvam Translate, Sarvam Vision)
 
@@ -170,7 +168,7 @@ YesNo
       * [Saaras](https://docs.sarvam.ai/api/getting-started/models/saaras)
       * [Bulbul](https://docs.sarvam.ai/api/getting-started/models/bulbul)
       * [Sarvam 105B](https://docs.sarvam.ai/api/getting-started/models/sarvam-105b)
-      * [Open-Weight ModelsBeta](https://docs.sarvam.ai/api/getting-started/models/openweight)
+      * [Open-Weight Models](https://docs.sarvam.ai/api/getting-started/models/openweight)
 
       * [Mayura](https://docs.sarvam.ai/api/getting-started/models/mayura)
       * [Sarvam Translate](https://docs.sarvam.ai/api/getting-started/models/sarvam-translate)

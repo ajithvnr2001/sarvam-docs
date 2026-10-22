@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/getting-started/models/openweight/gemma-4-31b/
 title: Gemma 4 31B | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:34.334043+00:00
+fetched_at: 2026-10-22T06:32:58.493258+00:00
 ---
 
 # Gemma 4 31B | Sarvam API Docs
@@ -27,15 +27,13 @@ Scroll to top
 
 # Gemma 4 31B
 
-Beta
-
 Ask a question|Copy page|[View as Markdown](https://docs.sarvam.ai/api/getting-started/models/openweight/gemma-4-31b.md "View this page as plain text")|More actions
 
 This page is for Model APIs.
 
 Gemma 4 31B is a 31B-parameter instruction-tuned model for text and image understanding. It accepts text and inline images with a **131,072-token context window**.
 
-Gemma 4 31B is available in **beta** and is not specifically tuned for Indian languages. Access is granted per API key, [contact us](https://docs.sarvam.ai/api/getting-started/help) to request access.
+Gemma 4 31B is not specifically tuned for Indian languages.
 
 ## At a glance
 
@@ -141,7 +139,6 @@ Image URL| An `image_url` uses an `http(s)` URL| `400 invalid_request_error`| In
 Structured output| `response_format` is combined with a JSON instruction in the prompt| `200` with whitespace output and `finish_reason: "length"`| Remove the duplicate JSON instruction from the prompt.  
 Tools| The tool schema is invalid| `400 invalid_request_error`| Check the schema requirements in [Chat Completion V2](https://docs.sarvam.ai/api-reference/chat/chat-completions-v2).  
 Authentication| API key is missing or invalid| `403 invalid_api_key_error`| Check the `api-subscription-key` header.  
-Access| API key does not have beta access| `400 invalid_request_error`| [Request beta access](https://docs.sarvam.ai/api-reference/beta-apis).  
 Model| Model ID is unknown or unavailable| `404 not_found_error`| Confirm the ID with [`GET /v2/models`](https://docs.sarvam.ai/api-reference/chat/models-v2).  
 Quota| No credits remain| `402 insufficient_quota_error`| Add credits in the [dashboard](https://dashboard.sarvam.ai/).  
 Rate limit| Request or concurrency limit is exceeded| `429 rate_limit_exceeded_error`| Back off and retry.  
@@ -163,10 +160,10 @@ YesNo
       * [Saaras](https://docs.sarvam.ai/api/getting-started/models/saaras)
       * [Bulbul](https://docs.sarvam.ai/api/getting-started/models/bulbul)
       * [Sarvam 105B](https://docs.sarvam.ai/api/getting-started/models/sarvam-105b)
-      * [Open-Weight ModelsBeta](https://docs.sarvam.ai/api/getting-started/models/openweight)
-        * [GLM-5.3Beta](https://docs.sarvam.ai/api/getting-started/models/openweight/glm-5-3)
-        * [Gemma 4 31BBeta](https://docs.sarvam.ai/api/getting-started/models/openweight/gemma-4-31b)
-        * [DeepSeek V4.1 FlashBeta](https://docs.sarvam.ai/api/getting-started/models/openweight/deepseek-v4.1-flash)
+      * [Open-Weight Models](https://docs.sarvam.ai/api/getting-started/models/openweight)
+        * [GLM-5.3](https://docs.sarvam.ai/api/getting-started/models/openweight/glm-5-3)
+        * [Gemma 4 31B](https://docs.sarvam.ai/api/getting-started/models/openweight/gemma-4-31b)
+        * [DeepSeek V4.1 Flash](https://docs.sarvam.ai/api/getting-started/models/openweight/deepseek-v4.1-flash)
 
       * [Mayura](https://docs.sarvam.ai/api/getting-started/models/mayura)
       * [Sarvam Translate](https://docs.sarvam.ai/api/getting-started/models/sarvam-translate)

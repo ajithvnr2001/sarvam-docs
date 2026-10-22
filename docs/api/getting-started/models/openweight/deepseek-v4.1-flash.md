@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/getting-started/models/openweight/deepseek-v4.1-flash
 title: DeepSeek V4.1 Flash | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:34.085473+00:00
+fetched_at: 2026-10-22T06:32:58.333296+00:00
 ---
 
 # DeepSeek V4.1 Flash | Sarvam API Docs
@@ -29,15 +29,11 @@ Scroll to top
 
 # DeepSeek V4.1 Flash
 
-Beta
-
 Ask a question|Copy page|[View as Markdown](https://docs.sarvam.ai/api/getting-started/models/openweight/deepseek-v4.1-flash.md "View this page as plain text")|More actions
 
 This page is for Model APIs.
 
 DeepSeek V4.1 Flash is a general-purpose [open-weight model](https://docs.sarvam.ai/api/getting-started/models/openweight) served on Sarvam infrastructure. It supports text input and output with a **1,048,576-token context window**.
-
-DeepSeek V4.1 Flash is available in **beta**. Access is granted per API key, [contact us](https://docs.sarvam.ai/api/getting-started/help) to request access.
 
 ## At a glance
 
@@ -143,7 +139,6 @@ Reasoning| Reasoning consumes the full `max_tokens` budget| `200` with `content:
 Structured output| `response_format` is used while reasoning is enabled| `200` with `content: null`| Disable reasoning with `extra_body`.  
 Tools| A named `tool_choice` is provided without `tools`| `422 unprocessable_entity_error`| Include the matching function in `tools`.  
 Authentication| API key is missing or invalid| `403 invalid_api_key_error`| Check the `api-subscription-key` header.  
-Access| API key does not have beta access| `400 invalid_request_error`| [Request beta access](https://docs.sarvam.ai/api-reference/beta-apis).  
 Model| Model ID is unknown or unavailable| `404 not_found_error`| Confirm the ID with [`GET /v2/models`](https://docs.sarvam.ai/api-reference/chat/models-v2).  
 Quota| No credits remain| `402 insufficient_quota_error`| Add credits in the [dashboard](https://dashboard.sarvam.ai/).  
 Rate limit| Request or concurrency limit is exceeded| `429 rate_limit_exceeded_error`| Back off and retry.  
@@ -165,10 +160,10 @@ YesNo
       * [Saaras](https://docs.sarvam.ai/api/getting-started/models/saaras)
       * [Bulbul](https://docs.sarvam.ai/api/getting-started/models/bulbul)
       * [Sarvam 105B](https://docs.sarvam.ai/api/getting-started/models/sarvam-105b)
-      * [Open-Weight ModelsBeta](https://docs.sarvam.ai/api/getting-started/models/openweight)
-        * [GLM-5.3Beta](https://docs.sarvam.ai/api/getting-started/models/openweight/glm-5-3)
-        * [Gemma 4 31BBeta](https://docs.sarvam.ai/api/getting-started/models/openweight/gemma-4-31b)
-        * [DeepSeek V4.1 FlashBeta](https://docs.sarvam.ai/api/getting-started/models/openweight/deepseek-v4.1-flash)
+      * [Open-Weight Models](https://docs.sarvam.ai/api/getting-started/models/openweight)
+        * [GLM-5.3](https://docs.sarvam.ai/api/getting-started/models/openweight/glm-5-3)
+        * [Gemma 4 31B](https://docs.sarvam.ai/api/getting-started/models/openweight/gemma-4-31b)
+        * [DeepSeek V4.1 Flash](https://docs.sarvam.ai/api/getting-started/models/openweight/deepseek-v4.1-flash)
 
       * [Mayura](https://docs.sarvam.ai/api/getting-started/models/mayura)
       * [Sarvam Translate](https://docs.sarvam.ai/api/getting-started/models/sarvam-translate)

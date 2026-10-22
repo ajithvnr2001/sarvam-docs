@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/getting-started/pricing/
 title: Pricing | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:37.382558+00:00
+fetched_at: 2026-10-22T06:32:45.269203+00:00
 ---
 
 # Pricing | Sarvam API Docs
@@ -44,9 +44,9 @@ Model| Input| Cached input| Output| Status
 ---|---|---|---|---  
 Sarvam 105B (`sarvam-105b`)| ₹15| ₹5| ₹60| Available  
 Sarvam 105B Chat (`sarvam-105b-conversations`)| ₹15| ₹5| ₹60| Available  
-Gemma 4 31B (`gemma4`)| ₹35| ₹10| ₹90| Beta  
-GLM-5.3 (`glm5.3`)| ₹126| ₹20| ₹390| Beta  
-DeepSeek V4.1 Flash (`deepseekv4.1-flash`)| ₹25| ₹0.5| ₹105| Beta  
+Gemma 4 31B (`gemma4`)| ₹35| ₹10| ₹90| Available  
+GLM-5.3 (`glm5.3`)| ₹126| ₹20| ₹390| Available  
+DeepSeek V4.1 Flash (`deepseekv4.1-flash`)| ₹25| ₹0.5| ₹105| Available  
   
 GLM-5.3, Gemma 4 31B, and DeepSeek V4.1 Flash are [available in beta](https://docs.sarvam.ai/api-reference/beta-apis).
 
@@ -57,9 +57,9 @@ Priced per hour, billed per second.
 Service| Price per hour  
 ---|---  
 Speech to Text| ₹30  
-Speech to Text with Diarization| ₹45  
+Speech to Text with Diarization| ₹36  
 Speech to Text and Translate| ₹30  
-Speech to Text, Translate, and Diarization| ₹45  
+Speech to Text, Translate, and Diarization| ₹36  
   
 ## Text Processing
 

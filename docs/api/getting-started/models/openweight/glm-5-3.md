@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/getting-started/models/openweight/glm-5-3/
 title: GLM-5.3 | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:34.813864+00:00
+fetched_at: 2026-10-22T06:32:58.569703+00:00
 ---
 
 # GLM-5.3 | Sarvam API Docs
@@ -30,15 +30,11 @@ Scroll to top
 
 # GLM-5.3
 
-Beta
-
 Ask a question|Copy page|[View as Markdown](https://docs.sarvam.ai/api/getting-started/models/openweight/glm-5-3.md "View this page as plain text")|More actions
 
 This page is for Model APIs.
 
 GLM-5.3 is a large-scale reasoning model built for complex software engineering and long-horizon agent tasks. It supports text input and output with a **1,048,576-token context window**.
-
-GLM-5.3 is available in **beta**. Access is granted per API key, [contact us](https://docs.sarvam.ai/api/getting-started/help) to request access.
 
 ## At a glance
 
@@ -151,7 +147,6 @@ Parameters| More than four `stop` sequences| `503 model_overloaded` (may retry)|
 Request body| Wrong JSON types (serde validation)| `400 invalid_request_error`| Match types in the API Reference; read `error.message`.  
 Payload| Body larger than 10 MB| `413`| Shrink text or inline images.  
 Authentication| API key is missing or invalid| `403 invalid_api_key_error`| Check the `api-subscription-key` header.  
-Access| API key does not have beta access| `400 invalid_request_error`| [Request beta access](https://docs.sarvam.ai/api-reference/beta-apis).  
 Model| Model ID is unknown or unavailable| `404 not_found_error`| Confirm the ID with [`GET /v2/models`](https://docs.sarvam.ai/api-reference/chat/models-v2).  
 Quota| No credits remain| `402 insufficient_quota_error`| Add credits in the [dashboard](https://dashboard.sarvam.ai/).  
 Rate limit| Request or concurrency limit is exceeded| `429 rate_limit_exceeded_error`| Back off and retry.  
@@ -173,10 +168,10 @@ YesNo
       * [Saaras](https://docs.sarvam.ai/api/getting-started/models/saaras)
       * [Bulbul](https://docs.sarvam.ai/api/getting-started/models/bulbul)
       * [Sarvam 105B](https://docs.sarvam.ai/api/getting-started/models/sarvam-105b)
-      * [Open-Weight ModelsBeta](https://docs.sarvam.ai/api/getting-started/models/openweight)
-        * [GLM-5.3Beta](https://docs.sarvam.ai/api/getting-started/models/openweight/glm-5-3)
-        * [Gemma 4 31BBeta](https://docs.sarvam.ai/api/getting-started/models/openweight/gemma-4-31b)
-        * [DeepSeek V4.1 FlashBeta](https://docs.sarvam.ai/api/getting-started/models/openweight/deepseek-v4.1-flash)
+      * [Open-Weight Models](https://docs.sarvam.ai/api/getting-started/models/openweight)
+        * [GLM-5.3](https://docs.sarvam.ai/api/getting-started/models/openweight/glm-5-3)
+        * [Gemma 4 31B](https://docs.sarvam.ai/api/getting-started/models/openweight/gemma-4-31b)
+        * [DeepSeek V4.1 Flash](https://docs.sarvam.ai/api/getting-started/models/openweight/deepseek-v4.1-flash)
 
       * [Mayura](https://docs.sarvam.ai/api/getting-started/models/mayura)
       * [Sarvam Translate](https://docs.sarvam.ai/api/getting-started/models/sarvam-translate)

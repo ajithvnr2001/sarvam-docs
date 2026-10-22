@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/getting-started/models/openweight/
 title: Open-Weight Models | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:14:33.933774+00:00
+fetched_at: 2026-10-22T06:32:45.611375+00:00
 ---
 
 # Open-Weight Models | Sarvam API Docs
@@ -31,15 +31,11 @@ Scroll to top
 
 # Open-Weight Models
 
-Beta
-
 Ask a question|Copy page|[View as Markdown](https://docs.sarvam.ai/api/getting-started/models/openweight.md "View this page as plain text")|More actions
 
 This page is for Model APIs.
 
 Run leading **open-weight models** on Sarvam infrastructure through the same OpenAI-compatible `/v2` API, with your existing Sarvam API key and credits. Switching models is a one-line change to the `model` field.
-
-**Available in beta.** Your API key must be [whitelisted for beta access](https://docs.sarvam.ai/api-reference/beta-apis) before these models respond. [Contact us](https://docs.sarvam.ai/api/getting-started/help) to request access.
 
 ## Choose a model
 
@@ -73,11 +69,11 @@ Log probabilities or `n > 1` with fast answers| `gemma4`| Not supported on `glm5
   
 ## Quickstart
 
-[1](https://docs.sarvam.ai/api/getting-started/models/openweight#get-access)
+[1](https://docs.sarvam.ai/api/getting-started/models/openweight#get-an-api-key)
 
-### Get access
+### Get an API key
 
-Create an API key in the [dashboard](https://dashboard.sarvam.ai/) and [request beta access](https://docs.sarvam.ai/api-reference/beta-apis) for it.
+Create an API key in the [dashboard](https://dashboard.sarvam.ai/).
 
 [2](https://docs.sarvam.ai/api/getting-started/models/openweight#set-your-key)
 
@@ -185,7 +181,6 @@ Reasoning tokens count toward `max_tokens` and are billed as output. If you see 
 
 Symptom| Likely cause| Fix  
 ---|---|---  
-`400 invalid_request_error` before the model runs| Key not whitelisted for beta| [Request access](https://docs.sarvam.ai/api-reference/beta-apis)  
 `403 invalid_api_key_error`| Missing or wrong key header| Check `api-subscription-key` or the Bearer token  
 `404 not_found_error`| Unknown or wrongly cased model ID| IDs are case-sensitive. List them with [`GET /v2/models`](https://docs.sarvam.ai/api-reference/chat/models-v2)  
 Empty `content`, `finish_reason: "length"`| Reasoning used the token budget| Raise `max_tokens` or lower `reasoning_effort`  
@@ -238,10 +233,6 @@ Read the model ID from configuration, for example `model=os.environ.get("SARVAM_
 
 Usage is metered per token against your Sarvam credits, see [Pricing](https://docs.sarvam.ai/api/getting-started/pricing). Reasoning is billed as output. Limits apply per API key, see [Credits & Rate Limits](https://docs.sarvam.ai/api/getting-started/ratelimits).
 
-###### Beta access
-
-Access is granted per API key. See [Access to Beta APIs](https://docs.sarvam.ai/api-reference/beta-apis).
-
 ## Next steps
 
 [Chat Completions guideStreaming, tool calling and structured outputs.](https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/overview)[Responses APIStateless responses with reasoning and tools.](https://docs.sarvam.ai/api-reference/responses/create)[PricingPer-token rates for every model.](https://docs.sarvam.ai/api/getting-started/pricing)
@@ -262,10 +253,10 @@ YesNo
       * [Saaras](https://docs.sarvam.ai/api/getting-started/models/saaras)
       * [Bulbul](https://docs.sarvam.ai/api/getting-started/models/bulbul)
       * [Sarvam 105B](https://docs.sarvam.ai/api/getting-started/models/sarvam-105b)
-      * [Open-Weight ModelsBeta](https://docs.sarvam.ai/api/getting-started/models/openweight)
-        * [GLM-5.3Beta](https://docs.sarvam.ai/api/getting-started/models/openweight/glm-5-3)
-        * [Gemma 4 31BBeta](https://docs.sarvam.ai/api/getting-started/models/openweight/gemma-4-31b)
-        * [DeepSeek V4.1 FlashBeta](https://docs.sarvam.ai/api/getting-started/models/openweight/deepseek-v4.1-flash)
+      * [Open-Weight Models](https://docs.sarvam.ai/api/getting-started/models/openweight)
+        * [GLM-5.3](https://docs.sarvam.ai/api/getting-started/models/openweight/glm-5-3)
+        * [Gemma 4 31B](https://docs.sarvam.ai/api/getting-started/models/openweight/gemma-4-31b)
+        * [DeepSeek V4.1 Flash](https://docs.sarvam.ai/api/getting-started/models/openweight/deepseek-v4.1-flash)
 
       * [Mayura](https://docs.sarvam.ai/api/getting-started/models/mayura)
       * [Sarvam Translate](https://docs.sarvam.ai/api/getting-started/models/sarvam-translate)

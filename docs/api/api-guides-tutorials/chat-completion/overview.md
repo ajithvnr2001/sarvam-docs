@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/overview/
 title: Chat Completion API | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T14:23:19.614153+00:00
+fetched_at: 2026-10-22T06:32:46.039752+00:00
 ---
 
 # Chat Completion API | Sarvam API Docs
@@ -14,7 +14,7 @@ Skip to navigation
 On this page
 
   * V1 Chat Completion
-  * V2 Chat Completion (Beta)
+  * V2 Chat Completion
   * V2 models
   * Session affinity for multi-turn conversations
   * V2 feature support
@@ -46,7 +46,7 @@ Ask a question|Copy page|[View as Markdown](https://docs.sarvam.ai/api/api-guide
 
 This page is for Model APIs.
 
-Use the Chat Completion API to build conversational AI experiences with native support for Indian languages and deep contextual reasoning. Sarvam provides two versions: V1 for Sarvam models and beta V2 for Sarvam and open-weight models.
+Use the Chat Completion API to build conversational AI experiences with native support for Indian languages and deep contextual reasoning. Sarvam provides two versions: V1 for Sarvam models and V2 for Sarvam and open-weight models.
 
 Use the [Sarvam chat skill](https://github.com/sarvamai/skills/tree/main/chat) to generate correct chat completion code from your AI coding assistant:
     
@@ -90,9 +90,9 @@ PythonJavaScriptcURL
     
     print(response.choices[0].message.content)
 
-## V2 Chat Completion (Beta)
+## V2 Chat Completion
 
-`POST /v2/chat/completions` supports `sarvam-105b`, `glm5.3`, `gemma4`, and `deepseekv4.1-flash`. Use V2 for the OpenAI-compatible beta API and open-weight models. See the [Chat Completion V2 API Reference](https://docs.sarvam.ai/api-reference/chat/chat-completions-v2) for the complete request and response schema.
+`POST /v2/chat/completions` supports `sarvam-105b`, `glm5.3`, `gemma4`, and `deepseekv4.1-flash`. Use V2 for the OpenAI-compatible API and open-weight models. See the [Chat Completion V2 API Reference](https://docs.sarvam.ai/api-reference/chat/chat-completions-v2) for the complete request and response schema.
 
 PythonJavaScriptcURL
     
@@ -110,8 +110,6 @@ PythonJavaScriptcURL
     )
     
     print(response.choices[0].message.content)
-
-**Beta access:** V2 requires whitelisting per API key. Without access you get `400 invalid_request_error` before the model runs. See [Beta APIs](https://docs.sarvam.ai/api-reference/beta-apis).
 
 ### V2 models
 
@@ -991,7 +989,7 @@ YesNo
 
     * Large Language Models
       * [Chat Completion](https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/overview)
-      * [Responses APIBeta](https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/responses-api)
+      * [Responses API](https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/responses-api)
       * How-to
 
     * Speech to Text
