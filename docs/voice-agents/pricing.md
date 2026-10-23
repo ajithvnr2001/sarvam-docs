@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/voice-agents/pricing/
 title: Voice Agents Pricing in India: Per-Minute Rates in INR | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:15:33.305432+00:00
+fetched_at: 2026-10-23T06:39:02.235639+00:00
 ---
 
 # Voice Agents Pricing in India: Per-Minute Rates in INR | Sarvam API Docs
@@ -39,16 +39,15 @@ Prices are in Indian rupees (₹) and exclude GST.
 
 ## Plans
 
-Plan| Voice agent rate| Monthly fee| Best for  
+Plan| Voice agent rate| Minimum subscription| Best for  
 ---|---|---|---  
 Pay as you go| ₹3.50 per minute| None| Under 3,000 minutes a month  
 Pro| ₹3.25 per minute| ₹9,999| 3,000 to 16,000 minutes a month  
 Growth| ₹3.15 per minute| ₹49,999| 16,000 to 65,000 minutes a month  
-Business (coming soon)| ₹3.00 per minute| ₹2,00,000| 65,000 minutes to 2 lakh minutes a month  
+Business| ₹3.00 per minute| ₹1,99,999| 65,000 minutes to 2 lakh minutes a month  
 Enterprise| Custom| Committed volume| 2 lakh minutes a month and above  
   
-  * **Business is coming soon.** Until it launches, Growth covers volumes from 16,000 up to 2 lakh minutes a month.
-  * **Self-serve plans are prepaid.** A paid plan’s monthly fee comes back as credits, one credit per rupee. Minutes beyond those credits are billed at the same plan rate from your credit balance.
+  * **Self-serve plans are prepaid.** A paid plan is a minimum monthly subscription that comes back in full as credits, one credit per rupee. Minutes beyond those credits are billed at the same plan rate from your credit balance.
   * **Enterprise is postpaid.** Pricing is set on your committed monthly volume, and you are invoiced monthly for the minutes you use, with your commitment as the minimum. Enterprise also adds workflows, WhatsApp campaigns, custom tool authoring, custom rate limits, and forward deployed engineering support. [Talk to sales](https://www.sarvam.ai/contact-us).
 
 
@@ -61,19 +60,19 @@ A minute is one 60-second pulse, and each call is rounded up to whole pulses. A 
 
 ## Estimate your monthly cost
 
-On a paid plan, you pay the plan’s monthly fee or your minutes multiplied by the plan rate, whichever is higher:
+On a paid plan, you pay the plan’s minimum monthly subscription or your minutes multiplied by the plan rate, whichever is higher:
     
     
-    monthly cost = max(plan monthly fee, minutes × plan rate)
+    monthly cost = max(plan minimum subscription, minutes × plan rate)
 
-On pay as you go there is no fee, so the cost is `minutes × ₹3.50`.
+On pay as you go there is no minimum, so the cost is `minutes × ₹3.50`.
 
 Minutes a month| Plan| Monthly cost| On pay as you go  
 ---|---|---|---  
 1,000| Pay as you go| ₹3,500| ₹3,500  
 10,000| Pro| ₹32,500| ₹35,000  
 50,000| Growth| ₹1,57,500| ₹1,75,000  
-1,00,000 (1 lakh)| Growth (Business, coming soon)| ₹3,15,000 (₹3,00,000 on Business)| ₹3,50,000  
+1,00,000 (1 lakh)| Business| ₹3,00,000| ₹3,50,000  
 2,00,000 (2 lakh) and above| Enterprise| [Talk to sales](https://www.sarvam.ai/contact-us)| ₹7,00,000  
   
 Telephony, phone numbers, and test runs are billed on top, at the rates below.
@@ -90,7 +89,7 @@ Call forwarding to a phone number (PSTN)| ₹0.40| 30-second pulse
 Call forwarding to a SIP destination| ₹0.35| 30-second pulse  
 Phone number rental (11, 79, or 80 series)| ₹59| Number, per 30 days  
   
-  * **Bring your own telephony.** Exotel, Smartflo, Plivo, Twilio, Vobiz, InTalk, and Pulse connect self-serve. Custom SIP is available on Business (coming soon) and Enterprise and is set up by the Sarvam team. See [Bring your own telephony](https://docs.sarvam.ai/voice-agents/deploy/telephony/bring-your-own).
+  * **Bring your own telephony.** Exotel, Smartflo, Plivo, Twilio, Vobiz, InTalk, and Pulse connect self-serve. Custom SIP is available on Business and Enterprise and is set up by the Sarvam team. See [Bring your own telephony](https://docs.sarvam.ai/voice-agents/deploy/telephony/bring-your-own).
   * **Rent a number from Sarvam.** Rented numbers renew every 30 days until you cancel. See [Rent a number from Sarvam](https://docs.sarvam.ai/voice-agents/deploy/telephony/rent-from-sarvam).
   * **Forwarded calls.** Once the agent forwards a call, it is off the call, so the forwarded part is charged only as telephony, not as agent minutes. For example, if the agent hands over after 50 seconds and the forwarded call lasts 2 minutes, you pay 1 agent minute plus 4 forwarding pulses (₹1.60 to a phone number).
 
@@ -113,7 +112,7 @@ Plan| Concurrent calls| Calls started per minute
 Pay as you go| 4| 20  
 Pro| 10| 50  
 Growth| 30| 150  
-Business (coming soon)| 120| 600  
+Business| 200| 800  
 Enterprise| Custom| Custom  
   
 Limits apply across your organisation. Every campaign, instant outbound call, and inbound call counts toward them, and a call that would go past a limit is rejected.
@@ -126,7 +125,7 @@ The [concurrent agent campaign limit](https://docs.sarvam.ai/voice-agents/deploy
 
 ###### How much does a voice AI agent cost per minute in India?
 
-On Sarvam Voice Agents, ₹3.50 per minute on pay as you go, ₹3.25 on Pro, ₹3.15 on Growth, and ₹3 on Business, which is coming soon. From 2 lakh minutes a month, Enterprise pricing is set on your committed volume. Prices are in rupees and exclude GST.
+On Sarvam Voice Agents, ₹3.50 per minute on pay as you go, ₹3.25 on Pro, ₹3.15 on Growth, and ₹3 on Business. From 2 lakh minutes a month, Enterprise pricing is set on your committed volume. Prices are in rupees and exclude GST.
 
 ###### Is there additional pricing for the models?
 
@@ -134,7 +133,7 @@ No. The per-minute rate covers the platform that runs your agent and the speech 
 
 ###### Which plan should I choose?
 
-Pay as you go below 3,000 minutes a month, Pro from 3,000, and Growth from 16,000 up to 2 lakh minutes. Business, from 65,000 minutes, is coming soon. From 2 lakh minutes a month, talk to sales about Enterprise.
+Pay as you go below 3,000 minutes a month, Pro from 3,000, Growth from 16,000, and Business from 65,000 minutes. From 2 lakh minutes a month, talk to sales about Enterprise.
 
 ###### Is telephony included in the per-minute rate?
 
@@ -196,6 +195,7 @@ YesNo
   * Monitor
 
     * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+    * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
     * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
 
     * [Boards](https://docs.sarvam.ai/voice-agents/monitor/boards)
@@ -292,6 +292,7 @@ YesNo
   * [Best practices](https://docs.sarvam.ai/voice-agents/deploy/campaigns/best-practices)
   * [Deploy with Code (API & SDK)](https://docs.sarvam.ai/voice-agents/deploy/deploy-with-code)
   * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+  * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
   * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
   * [Overview tab](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/overview)
   * [Connectivity](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/connectivity)
@@ -344,7 +345,9 @@ YesNo
   * [List attempts](https://docs.sarvam.ai/voice-agents/api/analytics/attempts)
   * [List interactions](https://docs.sarvam.ai/voice-agents/api/analytics/interactions)
   * [Get recording](https://docs.sarvam.ai/voice-agents/api/analytics/recordings)
+  * [Get forwarded recording](https://docs.sarvam.ai/voice-agents/api/analytics/forwarded-recordings)
   * [Get transcript](https://docs.sarvam.ai/voice-agents/api/analytics/transcripts)
+  * [Get trace](https://docs.sarvam.ai/voice-agents/api/analytics/traces)
   * [Overview](https://docs.sarvam.ai/voice-agents/api/boards/overview)
   * [Writing board SQL](https://docs.sarvam.ai/voice-agents/api/boards/sql)
   * [Best practices](https://docs.sarvam.ai/voice-agents/api/boards/best-practices)

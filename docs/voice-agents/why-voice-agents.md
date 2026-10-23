@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/voice-agents/why-voice-agents/
 title: Building Voice AI Agents in India: Why Sarvam Voice Agents | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:15:33.944611+00:00
+fetched_at: 2026-10-23T06:39:02.149218+00:00
 ---
 
 # Building Voice AI Agents in India: Why Sarvam Voice Agents | Sarvam API Docs
@@ -31,7 +31,7 @@ Ask a question|Copy page|[View as Markdown](https://docs.sarvam.ai/voice-agents/
 
 This page is for Voice Agents.
 
-**If you are building a voice agent for customers in India, Sarvam Voice Agents gives you the whole stack in one platform:** speech recognition, reasoning, and speech synthesis built for Indian languages, plus telephony, testing, outbound campaigns, and analytics. Pricing is per minute, from ₹3.50 on pay as you go down to ₹3.15 on Growth, and ₹3 on Business (coming soon). See [Pricing](https://docs.sarvam.ai/voice-agents/pricing).
+**If you are building a voice agent for customers in India, Sarvam Voice Agents gives you the whole stack in one platform:** speech recognition, reasoning, and speech synthesis built for Indian languages, plus telephony, testing, outbound campaigns, and analytics. Pricing is per minute, from ₹3.50 on pay as you go down to ₹3 on Business. See [Pricing](https://docs.sarvam.ai/voice-agents/pricing).
 
 ## What you get in one platform
 
@@ -70,10 +70,10 @@ Plan| Voice agent rate
 Pay as you go| ₹3.50 per minute  
 Pro| ₹3.25 per minute  
 Growth| ₹3.15 per minute  
-Business (coming soon)| ₹3.00 per minute  
+Business| ₹3.00 per minute  
 Enterprise (2 lakh minutes a month and above)| Custom, on committed volume  
   
-Self-serve plans are prepaid from your credit balance. Enterprise is postpaid and invoiced monthly. For example, 10,000 minutes a month costs ₹35,000 on pay as you go. Telephony is billed separately. See [Pricing](https://docs.sarvam.ai/voice-agents/pricing) for plan fees, telephony rates, rate limits, and a cost estimate by volume.
+Self-serve plans are prepaid from your credit balance. Enterprise is postpaid and invoiced monthly. For example, 10,000 minutes a month costs ₹35,000 on pay as you go. Telephony is billed separately. See [Pricing](https://docs.sarvam.ai/voice-agents/pricing) for plan subscriptions, telephony rates, rate limits, and a cost estimate by volume.
 
 ## When to use the APIs instead
 
@@ -123,6 +123,7 @@ YesNo
   * Monitor
 
     * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+    * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
     * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
 
     * [Boards](https://docs.sarvam.ai/voice-agents/monitor/boards)
@@ -219,6 +220,7 @@ YesNo
   * [Best practices](https://docs.sarvam.ai/voice-agents/deploy/campaigns/best-practices)
   * [Deploy with Code (API & SDK)](https://docs.sarvam.ai/voice-agents/deploy/deploy-with-code)
   * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+  * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
   * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
   * [Overview tab](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/overview)
   * [Connectivity](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/connectivity)
@@ -271,7 +273,9 @@ YesNo
   * [List attempts](https://docs.sarvam.ai/voice-agents/api/analytics/attempts)
   * [List interactions](https://docs.sarvam.ai/voice-agents/api/analytics/interactions)
   * [Get recording](https://docs.sarvam.ai/voice-agents/api/analytics/recordings)
+  * [Get forwarded recording](https://docs.sarvam.ai/voice-agents/api/analytics/forwarded-recordings)
   * [Get transcript](https://docs.sarvam.ai/voice-agents/api/analytics/transcripts)
+  * [Get trace](https://docs.sarvam.ai/voice-agents/api/analytics/traces)
   * [Overview](https://docs.sarvam.ai/voice-agents/api/boards/overview)
   * [Writing board SQL](https://docs.sarvam.ai/voice-agents/api/boards/sql)
   * [Best practices](https://docs.sarvam.ai/voice-agents/api/boards/best-practices)

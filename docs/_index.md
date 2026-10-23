@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/
 title: AI for all from India | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-17T14:23:19.790627+00:00
+fetched_at: 2026-10-23T06:39:02.343583+00:00
 ---
 
 # AI for all from India | Sarvam API Docs
@@ -81,9 +81,9 @@ End-to-end projects you can run today, with the full source in each guide.
 
 [Full changelog →](https://docs.sarvam.ai/changelog)
 
-[October 2026Bulbul V3 End of Life for Voice AgentsBulbul V3 reaches end of life on Voice Agents on November 10, 2026. Switch your agents to Bulbul V4 before then.Read the changelog →](https://docs.sarvam.ai/voice-agents/build/voice-language)
+[October 2026Business Plan for Voice Agents₹3 per minute, the lowest self-serve rate, on a ₹1,99,999 minimum monthly subscription that comes back as credits. 200 concurrent calls, 800 calls a minute, and custom SIP telephony.Read the changelog →](https://docs.sarvam.ai/voice-agents/pricing)
 
-[October 2026Updated Pricing for Language ModelsNew per-token prices for Sarvam 105B, Gemma 4, GLM-5.3, and DeepSeek V4.1 Flash, including lower input and output prices for Sarvam 105B and Gemma 4.](https://docs.sarvam.ai/api/getting-started/pricing)[October 2026Instant Voice Cloning in the sarvamai SDKsPython and TypeScript SDKs expose Instant Voice Cloning (beta) with the same convert / convertStream / WebSocket shape as Bulbul TTS.](https://docs.sarvam.ai/api/api-guides-tutorials/voice-cloning/overview)[October 2026Session Affinity for Chat Completion V2Send an optional `x-session-affinity` header so multi-turn `gemma4` conversations reuse cached prompt context for lower latency.](https://docs.sarvam.ai/api/api-guides-tutorials/chat-completion/overview#session-affinity-for-multi-turn-conversations)
+[October 2026Forwarded Call Recordings, Call Traces, and Provider Details in the Analytics APIDownload the recording of a transferred call’s forwarded leg, get a step-by-step event trace of any call, and match calls to your telephony provider’s records with the new provider details.](https://docs.sarvam.ai/voice-agents/api/analytics/overview)[October 2026Bulbul V3 End of Life for Voice AgentsBulbul V3 reaches end of life on Voice Agents on November 10, 2026. Switch your agents to Bulbul V4 before then.](https://docs.sarvam.ai/voice-agents/build/voice-language)[October 2026Volume Adjustment for Voice AgentsA new Volume slider in the agent’s voice settings sets how loud the agent sounds, from 0.7 to 2.0.](https://docs.sarvam.ai/voice-agents/build/voice-language#volume)
 
 ## Resources
 

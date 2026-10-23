@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/voice-agents/api/analytics/interactions/
 title: List interactions | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:15:03.830164+00:00
+fetched_at: 2026-10-23T06:39:16.650175+00:00
 ---
 
 # List interactions | Sarvam API Docs
@@ -87,9 +87,11 @@ Try it
     
           "channel_protocol": "websocket",
     
+          "channel_provider": "exotel",
+    
           "retry_attempt": 1,
     
-          "server_retry_attempt": 0,
+          "server_retry_attempt": 1,
     
           "campaign_id": "emi-reminder-oct-2026",
     
@@ -105,6 +107,18 @@ Try it
     
           "audio_url": "https://agents.sarvam.ai/media?org_id=acme-corp-7c2e9f&workspace_id=support-ws-4b1d8a&app_id=support-bot-3f9a1c2e-7b4d&interaction_id=20261007/9f1c2a7e-4b3d-4e8a-a1f0-6c2d9b7e5a14&audio_hash=merged_audio",
     
+          "deployment_id": null,
+    
+          "app_version": 4,
+    
+          "bot_contact_identifier": "+918069470000",
+    
+          "provider_identifier": "c3f8a2d1-6b4e-4f9a-8d2c-1e7b5a9f0d34",
+    
+          "goal_overall_status": "no_criteria",
+    
+          "goal_criteria": [],
+    
           "agent_variables": {
     
             "customer_name": "Priya Sharma",
@@ -115,9 +129,7 @@ Try it
     
             "promised_payment_date": "2026-10-10"
     
-          },
-    
-          "channel_provider": null
+          }
     
         }
     
@@ -167,7 +179,7 @@ sort_byenumOptionalDefaults to `interaction_id`
 
 Field to sort by. Default `interaction_id`. Unknown values return `422`.
 
-Show 7 enum values
+Show 8 enum values
 
 sort_orderenumOptionalDefaults to `asc`
 
@@ -221,7 +233,7 @@ itemslist of objects
 
 The interactions on this page.
 
-Show 31 properties
+Show 37 properties
 
 totalinteger
 
@@ -313,6 +325,7 @@ YesNo
   * Monitor
 
     * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+    * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
     * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
 
     * [Boards](https://docs.sarvam.ai/voice-agents/monitor/boards)
@@ -338,7 +351,9 @@ YesNo
       * [GETList attempts](https://docs.sarvam.ai/voice-agents/api/analytics/attempts)
       * [GETList interactions](https://docs.sarvam.ai/voice-agents/api/analytics/interactions)
       * [GETGet recording](https://docs.sarvam.ai/voice-agents/api/analytics/recordings)
+      * [GETGet forwarded recording](https://docs.sarvam.ai/voice-agents/api/analytics/forwarded-recordings)
       * [GETGet transcript](https://docs.sarvam.ai/voice-agents/api/analytics/transcripts)
+      * [GETGet trace](https://docs.sarvam.ai/voice-agents/api/analytics/traces)
 
     * Boards
 
@@ -414,6 +429,7 @@ YesNo
   * [Best practices](https://docs.sarvam.ai/voice-agents/deploy/campaigns/best-practices)
   * [Deploy with Code (API & SDK)](https://docs.sarvam.ai/voice-agents/deploy/deploy-with-code)
   * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+  * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
   * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
   * [Overview tab](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/overview)
   * [Connectivity](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/connectivity)
@@ -466,7 +482,9 @@ YesNo
   * [List attempts](https://docs.sarvam.ai/voice-agents/api/analytics/attempts)
   * [List interactions](https://docs.sarvam.ai/voice-agents/api/analytics/interactions)
   * [Get recording](https://docs.sarvam.ai/voice-agents/api/analytics/recordings)
+  * [Get forwarded recording](https://docs.sarvam.ai/voice-agents/api/analytics/forwarded-recordings)
   * [Get transcript](https://docs.sarvam.ai/voice-agents/api/analytics/transcripts)
+  * [Get trace](https://docs.sarvam.ai/voice-agents/api/analytics/traces)
   * [Overview](https://docs.sarvam.ai/voice-agents/api/boards/overview)
   * [Writing board SQL](https://docs.sarvam.ai/voice-agents/api/boards/sql)
   * [Best practices](https://docs.sarvam.ai/voice-agents/api/boards/best-practices)

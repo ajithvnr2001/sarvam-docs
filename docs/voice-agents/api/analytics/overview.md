@@ -2,7 +2,7 @@
 url: https://docs.sarvam.ai/voice-agents/api/analytics/overview/
 title: Analytics API overview | Sarvam API Docs
 method: scrapling+scrapegraph
-fetched_at: 2026-10-14T08:15:03.340482+00:00
+fetched_at: 2026-10-23T06:39:15.887425+00:00
 ---
 
 # Analytics API overview | Sarvam API Docs
@@ -32,13 +32,13 @@ Scroll to top
 
 # Analytics API overview
 
-Pull call attempts, conversations, transcripts, and recordings for your agents over REST.
+Pull call attempts, conversations, transcripts, recordings, and traces for your agents over REST.
 
 Ask a question|Copy page|[View as Markdown](https://docs.sarvam.ai/voice-agents/api/analytics/overview.md "View this page as plain text")|More actions
 
 This page is for Voice Agents.
 
-The Analytics API gives you the call data behind Monitor, one agent at a time: every try at reaching a user, every conversation that took place, and the transcript and audio of each conversation. Use it to feed your own reporting, CRM, or QA pipeline.
+The Analytics API gives you the call data behind Monitor, one agent at a time: every try at reaching a user, every conversation that took place, the transcript and audio of each conversation, and its step-by-step event trace. Use it to feed your own reporting, CRM, or QA pipeline.
 
 ## Base URL
     
@@ -83,7 +83,13 @@ Pass the `interaction_id` to [Get transcript](https://docs.sarvam.ai/voice-agent
 
 ### Download the recording
 
-Pass the same `interaction_id` to [Get recording](https://docs.sarvam.ai/voice-agents/api/analytics/recordings), which returns `audio/wav`. Save it with `curl ... -o call.wav`.
+Pass the same `interaction_id` to [Get recording](https://docs.sarvam.ai/voice-agents/api/analytics/recordings), which returns `audio/wav`. Save it with `curl ... -o call.wav`. If the agent transferred the call, [Get forwarded recording](https://docs.sarvam.ai/voice-agents/api/analytics/forwarded-recordings) returns the part after the transfer. It’s currently available only for transfers made through Vobiz.
+
+[4](https://docs.sarvam.ai/voice-agents/api/analytics/overview#trace-what-happened)
+
+### Trace what happened
+
+To see how the call went step by step, pass the `interaction_id` to [Get trace](https://docs.sarvam.ai/voice-agents/api/analytics/traces). It returns each turn’s speech recognition, LLM, tool-call and text-to-speech events, plus the conversation’s start, end and post-call analysis.
 
 ## Interaction IDs
 
@@ -92,7 +98,7 @@ An `interaction_id` has the form `<YYYYMMDD>/<id>`:
     
     20261007/9f1c2a7e-4b3d-4e8a-a1f0-6c2d9b7e5a14
 
-It contains a `/`. In the transcript and recording paths you can send it as is or encode the slash as `%2F` — both are accepted. An ID without a `/` returns `400`.
+It contains a `/`. In the transcript, recording and trace paths you can send it as is or encode the slash as `%2F` — both are accepted. An ID without a `/` returns `400`.
 
 ## Filtering
 
@@ -126,9 +132,9 @@ Operator| Matches
   
 Group| Fields you can filter on  
 ---|---  
-Identifiers| `interaction_id`, `attempt_id`, `job_id`, `user_id`, `user_identifier`, `user_contact_identifier`, `campaign_id`, `cohort_id`  
-Call details| `language_name`, `channel_type`, `channel_direction`, `channel_protocol`, `channel_provider`, `connectivity_status`, `num_messages`, `duration_in_seconds`  
-Outcome| `failure_reason`, `end_reason`, `ended_by`, `has_log_issues`, `is_debug_call` (`"true"` or `"false"`)  
+Identifiers| `interaction_id`, `attempt_id`, `job_id`, `user_id`, `user_identifier`, `user_contact_identifier`, `user_contact_hashed`, `campaign_id`, `cohort_id`  
+Call details| `language_name`, `channel_type`, `channel_direction`, `channel_protocol`, `channel_provider`, `connectivity_status`, `num_messages`, `duration_in_seconds`, `app_version`  
+Outcome| `failure_reason`, `end_reason`, `ended_by`, `next_action_status`, `goal_overall_status`, `has_log_issues`, `is_debug_call` (`"true"` or `"false"`)  
 Agent variables| `agent_variables.<key>` for the final value, `initial_agent_variables.<key>` for the value when the call started  
   
 ## Pagination
@@ -141,7 +147,7 @@ List responses are cached for 60 seconds, so repeating an identical request with
 
 ## Personal data
 
-Attempts and interactions include `user_contact`: the user’s **full, unmasked** phone number or email address. Treat responses as personal data — restrict who can read them, and keep them out of logs. Where you don’t need the raw value, use `user_contact_masked` (for display) or `user_contact_hashed` instead. Agent variables, transcripts, and recordings can contain personal data too.
+Attempts and interactions include `user_contact`: the user’s **full, unmasked** phone number or email address. Treat responses as personal data — restrict who can read them, and keep them out of logs. Where you don’t need the raw value, use `user_contact_masked` (for display) or `user_contact_hashed` instead. Agent variables, transcripts, recordings, and traces can contain personal data too.
 
 ## Errors
 
@@ -203,6 +209,7 @@ YesNo
   * Monitor
 
     * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+    * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
     * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
 
     * [Boards](https://docs.sarvam.ai/voice-agents/monitor/boards)
@@ -228,7 +235,9 @@ YesNo
       * [GETList attempts](https://docs.sarvam.ai/voice-agents/api/analytics/attempts)
       * [GETList interactions](https://docs.sarvam.ai/voice-agents/api/analytics/interactions)
       * [GETGet recording](https://docs.sarvam.ai/voice-agents/api/analytics/recordings)
+      * [GETGet forwarded recording](https://docs.sarvam.ai/voice-agents/api/analytics/forwarded-recordings)
       * [GETGet transcript](https://docs.sarvam.ai/voice-agents/api/analytics/transcripts)
+      * [GETGet trace](https://docs.sarvam.ai/voice-agents/api/analytics/traces)
 
     * Boards
 
@@ -304,6 +313,7 @@ YesNo
   * [Best practices](https://docs.sarvam.ai/voice-agents/deploy/campaigns/best-practices)
   * [Deploy with Code (API & SDK)](https://docs.sarvam.ai/voice-agents/deploy/deploy-with-code)
   * [Overview](https://docs.sarvam.ai/voice-agents/monitor/overview)
+  * [Call recordings](https://docs.sarvam.ai/voice-agents/monitor/call-recordings)
   * [Agent Analytics](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics)
   * [Overview tab](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/overview)
   * [Connectivity](https://docs.sarvam.ai/voice-agents/monitor/agent-analytics/connectivity)
@@ -356,7 +366,9 @@ YesNo
   * [List attempts](https://docs.sarvam.ai/voice-agents/api/analytics/attempts)
   * [List interactions](https://docs.sarvam.ai/voice-agents/api/analytics/interactions)
   * [Get recording](https://docs.sarvam.ai/voice-agents/api/analytics/recordings)
+  * [Get forwarded recording](https://docs.sarvam.ai/voice-agents/api/analytics/forwarded-recordings)
   * [Get transcript](https://docs.sarvam.ai/voice-agents/api/analytics/transcripts)
+  * [Get trace](https://docs.sarvam.ai/voice-agents/api/analytics/traces)
   * [Overview](https://docs.sarvam.ai/voice-agents/api/boards/overview)
   * [Writing board SQL](https://docs.sarvam.ai/voice-agents/api/boards/sql)
   * [Best practices](https://docs.sarvam.ai/voice-agents/api/boards/best-practices)

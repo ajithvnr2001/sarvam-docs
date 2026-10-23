@@ -211,23 +211,23 @@ Turn a script into a multi-speaker podcast episode with distinct Bulbul voices.
 
 [Full changelog →](/changelog)
 
+[October 2026 Business Plan for Voice Agents](/voice-agents/pricing)
+
+₹3 per minute, the lowest self-serve rate, on a ₹1,99,999 minimum monthly subscription that comes back as credits. 200 concurrent calls, 800 calls a minute, and custom SIP telephony.
+
+Read the changelog →
+
+[October 2026 Forwarded Call Recordings, Call Traces, and Provider Details in the Analytics API](/voice-agents/api/analytics/overview)
+
+Download the recording of a transferred call's forwarded leg, get a step-by-step event trace of any call, and match calls to your telephony provider's records with the new provider details.
+
 [October 2026 Bulbul V3 End of Life for Voice Agents](/voice-agents/build/voice-language)
 
 Bulbul V3 reaches end of life on Voice Agents on November 10, 2026. Switch your agents to Bulbul V4 before then.
 
-Read the changelog →
+[October 2026 Volume Adjustment for Voice Agents](/voice-agents/build/voice-language#volume)
 
-[October 2026 Updated Pricing for Language Models](/api/getting-started/pricing)
-
-New per-token prices for Sarvam 105B, Gemma 4, GLM-5.3, and DeepSeek V4.1 Flash, including lower input and output prices for Sarvam 105B and Gemma 4.
-
-[October 2026 Instant Voice Cloning in the sarvamai SDKs](/api/api-guides-tutorials/voice-cloning/overview)
-
-Python and TypeScript SDKs expose Instant Voice Cloning (beta) with the same convert / convertStream / WebSocket shape as Bulbul TTS.
-
-[October 2026 Session Affinity for Chat Completion V2](/api/api-guides-tutorials/chat-completion/overview#session-affinity-for-multi-turn-conversations)
-
-Send an optional `x-session-affinity` header so multi-turn `gemma4` conversations reuse cached prompt context for lower latency.
+A new Volume slider in the agent's voice settings sets how loud the agent sounds, from 0.7 to 2.0.
 
 ## Resources
 
@@ -302,12 +302,12 @@ Community
 - [API Reference](https://docs.sarvam.ai/api-reference/llms.txt): Explore REST & WebSocket endpoints
   - [Introduction](https://docs.sarvam.ai/api-reference/introduction.md)
   - [Authentication](https://docs.sarvam.ai/api-reference/authentication.md)
-  - [Access to Beta APIs](https://docs.sarvam.ai/api-reference/beta-apis.md)
+  - [Beta APIs and Models](https://docs.sarvam.ai/api-reference/beta-apis.md)
   - [Meta Prompt Guide](https://docs.sarvam.ai/api-reference/metaprompt.md)
   - [Introduction](https://docs.sarvam.ai/api-reference/conversations.md)
 - [Changelog](https://docs.sarvam.ai/changelog/llms.txt): Track API and product updates
+  - [October 22, 2026](https://docs.sarvam.ai/changelog/2026/10/22.md)
   - [October 16, 2026](https://docs.sarvam.ai/changelog/2026/10/16.md)
   - [October 14, 2026](https://docs.sarvam.ai/changelog/2026/10/14.md)
   - [October 12, 2026](https://docs.sarvam.ai/changelog/2026/10/12.md)
   - [October 10, 2026](https://docs.sarvam.ai/changelog/2026/10/10.md)
-  - [October 6, 2026](https://docs.sarvam.ai/changelog/2026/10/6.md)

@@ -1087,3 +1087,7 @@
 {"url": "https://docs.sarvam.ai/changelog/2026/10/16/", "file": "changelog/2026/10/16.md", "title": "October 16, 2026 | Sarvam API Docs", "method": "scrapling+scrapegraph"}
 {"url": "https://docs.sarvam.ai/voice-agents/monitor/call-recordings/", "file": "voice-agents/monitor/call-recordings.md", "title": "Call recordings | Sarvam API Docs", "method": "scrapling+scrapegraph"}
 {"url": "https://docs.sarvam.ai/changelog/2026/10/22/", "file": "changelog/2026/10/22.md", "title": "October 22, 2026 | Sarvam API Docs", "method": "scrapling+scrapegraph"}
+{"url": "https://docs.sarvam.ai/voice-agents/api/analytics/forwarded-recordings/", "file": "voice-agents/api/analytics/forwarded-recordings.md", "title": "Get forwarded recording | Sarvam API Docs", "method": "scrapling+scrapegraph"}
+{"url": "https://docs.sarvam.ai/voice-agents/api/analytics/traces/", "file": "voice-agents/api/analytics/traces.md", "title": "Get trace | Sarvam API Docs", "method": "scrapling+scrapegraph"}
+{"url": "https://docs.sarvam.ai/api-reference/analytics/traces/", "file": "api-reference/analytics/traces.md", "title": "Get traces | Sarvam API Docs", "method": "scrapling+scrapegraph"}
+{"url": "https://docs.sarvam.ai/api-reference/analytics/forwarded-recordings/", "file": "api-reference/analytics/forwarded-recordings.md", "title": "Get forwarded recordings | Sarvam API Docs", "method": "scrapling+scrapegraph"}
